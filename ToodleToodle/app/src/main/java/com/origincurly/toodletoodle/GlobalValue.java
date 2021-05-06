@@ -1,7 +1,7 @@
 package com.origincurly.toodletoodle;
 
 public interface GlobalValue {
-    String TAG = "TOODLE_TOODLE";
+    String TAG = "TOODLE_TOODLE"; // curly
 
     // Device info
     int NOW_VERSION_CODE = 2;
