@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/header_bright_back">
+
+        <ImageView
+            android:src="@drawable/ic_back_black_26"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:onClick="BackClicked"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="138dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"/>
+
+    <EditText
+        android:id="@+id/mail_EditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="38dp"
+        android:hint="@string/user_mail_hint"
+        android:textColorHint="@color/user_edit_hint"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        android:textColor="@color/user_edit_txt"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:background="@drawable/custom_edit_text_transparent_back"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="2dp">
+
+        <EditText
+            android:id="@+id/pw_EditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/user_pw_hint"
+            android:textColorHint="@color/user_edit_hint"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            android:textColor="@color/user_edit_txt"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            android:imeOptions="actionNext"
+            android:background="@drawable/custom_edit_text_transparent_back"/>
+
+        <ImageView
+            android:id="@+id/pwShow_Img"
+            android:src="@drawable/ic_task_look_off_20"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="22dp"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:onClick="PwShowClicked"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="2dp">
+
+        <EditText
+            android:id="@+id/pwRe_EditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/user_pw_re_hint"
+            android:textColorHint="@color/user_edit_hint"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            android:textColor="@color/user_edit_txt"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:background="@drawable/custom_edit_text_transparent_back"/>
+
+        <ImageView
+            android:id="@+id/pwReShow_Img"
+            android:src="@drawable/ic_task_look_off_20"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="22dp"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:onClick="PwReShowClicked"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/user_pw_regex"
+        android:textSize="13dp"
+        android:textStyle="normal"
+        android:textColor="@color/user_notice_txt"/>
+
+    <TextView
+        android:id="@+id/userMsg_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="13dp"
+        android:textStyle="normal"
+        android:textColor="@color/user_msg_txt"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/joinEmailBtn_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/custom_submit_btn_default">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/joinEmailBtn_Img"
+                    android:src="@drawable/ic_check_default_20"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/join_mail_join_btn"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/user_basic_txt"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="JoinMailClicked"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

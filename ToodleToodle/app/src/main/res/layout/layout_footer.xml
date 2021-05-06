@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/footer_back">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/today_Img"
+                android:src="@drawable/ic_tab_today_default"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/today_indicator_Img"
+                android:src="@drawable/ic_tab_indicator_default"
+                android:layout_width="10dp"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="44dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="TodayClicked"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/project_Img"
+                android:src="@drawable/ic_tab_project_default"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/project_indicator_Img"
+                android:src="@drawable/ic_tab_indicator_default"
+                android:layout_width="10dp"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="44dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="ProjectClicked"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/calendar_Img"
+                android:src="@drawable/ic_tab_calendar_default"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/calendar_indicator_Img"
+                android:src="@drawable/ic_tab_indicator_default"
+                android:layout_width="10dp"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="44dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="CalendarClicked"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/my_Img"
+                android:src="@drawable/ic_tab_my_default"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/my_indicator_Img"
+                android:src="@drawable/ic_tab_indicator_default"
+                android:layout_width="10dp"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="44dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="MyClicked"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--region COMMON-->
+    <color name="colorPrimary">#ff8445</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#ff8445</color>
+
+    <color name="intro_status_bar_color">#ff8445</color>
+    <color name="status_bar_color">#ff8445</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="basic_circle_back">#f3f5f8</color>
+    <color name="dark_circle_back">#e6e8ed</color>
+
+
+    <color name="submit_btn_stroke_default">#ededf2</color>
+    <color name="submit_btn_stroke_active">#222222</color>
+
+    <!--footer-->
+    <color name="footer_back">#ffffff</color>
+    <color name="footer_on_btn_txt">#f8455f</color>
+    <color name="footer_off_btn_txt">#9c9c9c</color>
+
+    <!--endregion-->
+
+    <!--project-->
+    <color name="project_color_null">#222222</color>
+    <color name="project_color_1">#007cff</color>
+    <color name="project_color_2">#ff8600</color>
+    <color name="project_color_3">#f8455f</color>
+    <color name="project_color_4">#ff3a30</color>
+    <color name="project_color_5">#43e4c0</color>
+    <color name="project_color_6">#5d5ce6</color>
+    <color name="project_color_7">#fe2987</color>
+    <color name="project_color_8">#db6aff</color>
+    <color name="project_color_9">#407190</color>
+    <color name="project_color_10">#fec912</color>
+
+    <!--endregion-->
+
+    <!--region dialog-->
+
+    <color name="basic_back">#ffffff</color>
+    <color name="dialog_basic_back">#ffffff</color>
+    <color name="dialog_stroke">#000000</color>
+    <color name="dialog_basic_shadow">#888888</color>
+    <color name="dialog_title_txt">#222222</color>
+    <color name="dialog_content_txt">#222222</color>
+    <color name="dialog_negative_btn_back">#222222</color>
+    <color name="dialog_negative_btn_txt">#ffffff</color>
+    <color name="dialog_positive_btn_back">#ffffff</color>
+    <color name="dialog_positive_btn_txt">#222222</color>
+
+    <color name="dialog_topic_warning_txt">#ff3a30</color>
+    <color name="dialog_topic_notice_txt">#222222</color>
+    <color name="dialog_topic_confirm_txt">#2F9D27</color>
+
+    <!--dialog_bottom_sheet-->
+    <color name="dialog_bottom_sheet_item">#fafbfc</color>
+    <color name="dialog_bottom_sheet_item_select">#f3f5f8</color>
+    <color name="dialog_bottom_sheet_title_txt">#222222</color>
+    <color name="dialog_bottom_sheet_item_content_txt">#888c99</color>
+
+
+    <!--endregion-->
+
+    <!--region USER-->
+    <color name="user_basic_txt">#222222</color>
+    <color name="user_content_txt">#222222</color>
+    <color name="user_edit_hint">#b6bbc7</color>
+    <color name="user_edit_txt">#222222</color>
+    <color name="user_notice_txt">#888c99</color>
+    <color name="user_btn_txt">#222222</color>
+    <color name="user_msg_txt">#ff8445</color>
+    <color name="user_picker_hint">#888c99</color>
+    <color name="user_picker_txt">#222222</color>
+
+    <!--login-->
+    <color name="login_login_btn">#000000</color>
+    <color name="login_login_btn_txt">#ffffff</color>
+    <color name="login_find_btn_txt">#888c99</color>
+    <color name="login_divider_back">#d9dbe0</color>
+    <color name="login_social_login_btn_stroke">#ededf2</color>
+
+    <!--join_mail-->
+    <color name="join_mail_join_btn">#000000</color>
+    <color name="join_mail_join_btn_txt">#ffffff</color>
+    <color name="join_mail_pw_comment_txt">#000000</color>
+
+    <!--nick_set-->
+    <color name="nick_set_set_btn">#000000</color>
+    <color name="nick_set_set_btn_txt">#ffffff</color>
+
+    <!--db_check-->
+    <color name="db_check_back">#ffffff</color>
+    <color name="db_check_title_txt">#000000</color>
+    <color name="db_check_content_txt">#000000</color>
+
+    <color name="db_check_progress_base">#FAE0D4</color>
+    <color name="db_check_progress_main">#F29661</color>
+    <color name="db_check_progress_txt">#000000</color>
+
+
+    <!--endregion-->
+
+    <!--region MAIN -->
+    <color name="main_bright_back">#ffffff</color>
+
+    <color name="header_bright_back">#ffffff</color>
+    <color name="header_bright_txt">#222222</color>
+    <color name="header_dark_back">#000000</color>
+    <color name="header_dark_txt">#ffffff</color>
+
+    <color name="header_add_btn">#222222</color>
+    <color name="header_add_btn_txt">#ffffff</color>
+
+    <color name="header_title_txt">#222222</color>
+    <color name="header_sub_title_txt">#222222</color>
+    <color name="header_content_txt">#222222</color>
+    <color name="header_sub_content_txt">#888c99</color>
+    <color name="header_positive_btn_txt">#222222</color>
+    <color name="header_negative_btn_txt">#222222</color>
+
+    <color name="tab_back_active">#222222</color>
+    <color name="tab_txt_active">#ffffff</color>
+    <color name="tab_back_default">#f3f5f8</color>
+    <color name="tab_txt_default">#b6bbc7</color>
+
+    <color name="bottom_submit_btn_back">#222222</color>
+    <color name="bottom_submit_btn_txt">#ffffff</color>
+
+    <!--postit-->
+    <color name="postit_title_line">#19000000</color>
+    <color name="postit_icon_back">#d9e1ed</color>
+    <color name="postit_content_txt">#222222</color>
+    <color name="postit_time_txt">#888c99</color>
+    <color name="postit_end_btn_txt">#222222</color>
+    <color name="postit_revert_btn_txt">#ff8445</color>
+
+    <color name="postit_null_txt">#222222</color>
+    <color name="postit_mask_back">#bfffffff</color>
+    <color name="postit_end_strike_through">#222222</color>
+
+    <color name="postit_add_ready_txt">#ff8445</color>
+    <color name="postit_add_ready_line">#ededf2</color>
+    <color name="postit_add_edit_txt">#31353e</color>
+    <color name="postit_add_line">#222222</color>
+    <color name="postit_add_category_hint">#888c99</color>
+
+    <color name="postit_add_item_back">#f3f5f8</color>
+
+    <color name="postit_msg_back">#cc000000</color>
+    <color name="postit_msg_txt">#ffffff</color>
+
+    <!--task-->
+    <color name="task_during_item_back">#f3f5f8</color>
+    <color name="task_during_item_txt">#222222</color>
+    <color name="task_during_item_select_back">#222222</color>
+    <color name="task_during_item_select_txt">#ffffff</color>
+    <color name="task_during_hide_shadow">#D8ffffff</color>
+
+
+    <!--add_fast-->
+    <color name="add_key_txt">#4e535e</color>
+    <color name="add_value_hint_txt">#979aa2</color>
+    <color name="add_value_hint_bright_txt">#d9dbe0</color>
+    <color name="add_value_hint_line">#ededf2</color>
+    <color name="add_value_txt">#222222</color>
+    <color name="add_value_line">#ededf2</color>
+    <color name="add_value_select_back">#fafbfc</color>
+    <color name="add_value_select_line">#222222</color>
+    <color name="add_content_hint_txt">#939393</color>
+    <color name="add_value_importance_back">#fafbfc</color>
+    <color name="add_value_select_edge">#222222</color>
+
+    <!--endregion-->
+
+    <!--region project-->
+    <color name="project_bottom_tab_edge">#eff4fa</color>
+    <color name="project_bottom_tab_select">#222222</color>
+
+    <color name="project_main_text_color">#222222</color>
+    <color name="project_tab_select_txt_active">#222222</color>
+    <color name="project_tab_select_txt_default">#b6bbc7</color>
+
+    <!--endregion-->
+
+    <!--region kite-->
+
+    <color name="project_main_task_number_text_color">#000000</color>
+
+    <!--endregion-->
+
+    <!--region song-->
+
+    <color name="project_done_list_view_header_dark_back">#222222</color>
+    <color name="project_done_list_view_header_txt">#ffffff</color>
+
+    <color name="project_done_segmented_control_deselected_txt">#b6bbc7</color>
+    <color name="project_done_segmented_control_selected_txt">#ffffff</color>
+    <color name="project_done_segmented_control_deselected_back">#f3f5f8</color>
+    <color name="project_done_segmented_control_selected_back">#222222</color>
+
+    <color name="project_done_list_view_subtitle_txt">#222222</color>
+    <color name="project_done_white_back">#ffffff</color>
+
+    <color name="project_done_task_priority_txt">#222222</color>
+    <color name="project_done_task_priority_line">#eff4fa</color>
+
+    <color name="project_done_task_card_default_txt">#222222</color>
+    <color name="project_done_task_card_num_of_actions_txt">#777777</color>
+    <color name="project_done_task_card_vertical_bar">#000000</color>
+    <color name="project_done_task_card_show_less_button_txt">#31353e</color>
+    <color name="project_done_task_card_show_less_button_back">#222222</color>
+    <color name="project_done_task_card_action_list_txt">#31353e</color>
+    <color name="project_done_task_card_action_title_txt">#4e535e</color>
+    <color name="project_done_task_card_back">#222222</color>
+    <color name="project_done_task_card_action_completion_line">#222222</color>
+
+    <color name="project_done_add_task_button_txt">#222222</color>
+    <color name="project_done_add_task_button_back">#ffffff</color>
+    <color name="project_done_add_task_button_border">#000000</color>
+
+    <color name="calendar_project_color">#ff6700</color>
+    <color name="calendar_schedule_delete_button_txt">#222222</color>
+    <color name="calendar_schedule_delete_button_back">#f3f5f8</color>
+    <color name="calendar_content_title">#222222</color>
+    <color name="calendar_deadline_txt">#222222</color>
+    <color name="calendar_date_txt">#888c99</color>
+    <color name="calendar_memo_txt">#4e535e</color>
+
+    <color name="calendar_action_title">#4e535e</color>
+    <color name="calendar_action_completion_line">#222222</color>
+
+    <color name="calendar_toast_message_txt">#ffffff</color>
+    <color name="calendar_toast_message_back">#000000</color>
+    <!--endregion-->
+
+
+
+</resources>

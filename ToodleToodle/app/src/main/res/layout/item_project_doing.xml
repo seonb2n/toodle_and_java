@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:background="@color/basic_back">
+
+    <RelativeLayout
+        android:id="@+id/itemLeft_Layout"
+        android:layout_width="150dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iconLeft_Img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/dDayLeft_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/titleLeft_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressLeft_PrgBar"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:indeterminate="false"
+            android:progress="10"
+            android:progressDrawable="@drawable/custom_db_check_progress_bar"/>
+
+        <TextView
+            android:id="@+id/percentLeft_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/itemLeft_Btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/itemRight_Layout"
+        android:layout_width="150dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iconRight_Img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/dDayRight_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/titleRight_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressRight_PrgBar"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:indeterminate="false"
+            android:progress="10"
+            android:progressDrawable="@drawable/custom_db_check_progress_bar"/>
+
+        <TextView
+            android:id="@+id/percentRight_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/itemRight_Btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

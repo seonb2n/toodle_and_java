@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/custom_dialog_back">
+        
+        <ImageView
+            android:src="@drawable/ic_caution_26"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/dialog_topic_warning"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/dialog_topic_warning_txt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="69dp"
+            android:text="@string/dialog_add_fast_cancel_title"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/dialog_title_txt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="106dp"
+            android:text="@string/dialog_add_fast_cancel_content"
+            android:textSize="16dp"
+            android:textStyle="normal"
+            android:textColor="@color/dialog_content_txt"/>
+
+        <Button
+            android:id="@+id/negative_Btn"
+            android:layout_width="108dp"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="26dp"
+            android:textAllCaps="false"
+            android:text="@string/dialog_add_fast_cancel_negative_btn"
+            android:textSize="15dp"
+            android:textColor="@color/dialog_negative_btn_txt"
+            android:background="@drawable/custom_dialog_negative_btn_back"/>
+
+        <Button
+            android:id="@+id/positive_Btn"
+            android:layout_width="108dp"
+            android:layout_height="44dp"
+            android:textAllCaps="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="26dp"
+            android:text="@string/dialog_add_fast_cancel_positive_btn"
+            android:textSize="15dp"
+            android:textColor="@color/dialog_positive_btn_txt"
+            android:background="@color/transparent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <ImageView
+        android:layout_width="138dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"/>
+
+    <EditText
+        android:id="@+id/mail_EditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="23dp"
+        android:hint="@string/user_mail_hint"
+        android:textColorHint="@color/user_edit_hint"
+        android:textColor="@color/user_edit_txt"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:background="@drawable/custom_edit_text_transparent_back"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="2dp">
+
+        <EditText
+            android:id="@+id/pw_EditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/user_pw_hint"
+            android:textColorHint="@color/user_edit_hint"
+            android:textColor="@color/user_edit_txt"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:background="@drawable/custom_edit_text_transparent_back"/>
+
+        <ImageView
+            android:id="@+id/pwShow_Img"
+            android:src="@drawable/ic_task_look_off_20"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="22dp"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:onClick="PwShowClicked"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/userMsg_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="13dp"
+        android:textStyle="normal"
+        android:textColor="@color/user_msg_txt"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/loginBtn_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/custom_submit_btn_default">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            
+            <ImageView
+                android:id="@+id/loginBtn_Img"
+                android:src="@drawable/ic_check_default_20"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/login_login_btn"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/user_basic_txt"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:onClick="LoginClicked"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/login_find_btn"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:textColor="@color/login_find_btn_txt"
+            android:background="@color/transparent"
+            android:onClick="FindClicked"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/login_divider_back"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/login_join_mail_btn"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:textColor="@color/user_btn_txt"
+            android:background="@color/transparent"
+            android:onClick="JoinMailClicked"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/login_social_btn"
+        android:textSize="13dp"
+        android:textColor="@color/user_notice_txt"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginTop="11dp"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/custom_login_btn_back">
+
+            <ImageView
+                android:src="@drawable/m_ic_sn_snaver_gray_32"
+                android:layout_width="46dp"
+                android:layout_height="46dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="NaverLoginClicked"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/custom_login_btn_back">
+
+            <ImageView
+                android:src="@drawable/m_ic_sn_skakao_32"
+                android:layout_width="46dp"
+                android:layout_height="46dp"/>
+
+            <com.kakao.usermgmt.LoginButton
+                android:id="@+id/kakao_LoginButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparent"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="KakaoLoginClicked"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/custom_login_btn_back">
+
+            <ImageView
+                android:src="@drawable/m_ic_sn_sfb_gray_32"
+                android:layout_width="46dp"
+                android:layout_height="46dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="GoogleLoginClicked"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bright_back">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:text="@string/project_title"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:textColor="@color/header_bright_txt"/>
+
+        <RelativeLayout
+            android:layout_width="68dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/custom_header_add_btn">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:src="@drawable/ic_project_add_plus_16"
+                    android:layout_width="16dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/project_header_add_btn"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/header_add_btn_txt"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="ProjectAddClicked"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/project_no_project_task"
+            android:textSize="12dp"
+            android:textColor="@color/project_main_text_color"
+            android:textStyle="normal"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/npTaskCount_Txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/project_no_project_task_count"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/project_main_task_number_text_color"/>
+
+            <ImageView
+                android:src="@drawable/ic_left_black_14"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
+            android:background="@color/transparent"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/project_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="94dp"/>
+
+    <RelativeLayout
+        android:id="@+id/projectNull_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="94dp"
+        android:background="@color/basic_back"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="93dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/project_null"
+            android:textStyle="normal"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/project_main_text_color"/>
+
+        <ImageView
+            android:layout_width="336dp"
+            android:layout_height="256dp"
+            android:layout_marginTop="183dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/group_2"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/custom_project_tab_back">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@color/colorAccent"
+                android:layout_width="61dp"
+                android:layout_height="28dp"
+                android:layout_centerInParent="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="DoingClicked"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="2dp"
+                android:background="@color/project_bottom_tab_select"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:src="@color/colorAccent"
+                    android:layout_width="61dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/projectCount_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/project_tab_count_txt"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/project_tab_select_txt_active"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_footer"/>
+
+</RelativeLayout>

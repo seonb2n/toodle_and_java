@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/header_bright_back">
+
+            <ImageView
+                android:src="@drawable/ic_back_black_26"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="BackClicked"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="138dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="56dp"/>
+
+        <EditText
+            android:id="@+id/mail_EditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="38dp"
+            android:hint="@string/user_mail_hint"
+            android:textColorHint="@color/user_edit_hint"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            android:textColor="@color/user_edit_txt"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionDone"
+            android:background="@drawable/custom_edit_text_transparent_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/find_content"
+            android:textSize="13dp"
+            android:textStyle="normal"
+            android:textColor="@color/user_notice_txt"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/joinEmailBtn_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/custom_submit_btn_default">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/joinEmailBtn_Img"
+                        android:src="@drawable/ic_check_default_20"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/find_find_btn"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/user_basic_txt"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="FindClicked"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/end_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/basic_back"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="@string/find_end_content"
+                android:textSize="13dp"
+                android:textStyle="normal"
+                android:textColor="@color/user_content_txt"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/find_end_btn"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/nick_set_set_btn_txt"
+                android:background="@color/nick_set_set_btn"
+                android:onClick="FindEndClicked"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_back">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/back_Img"
+            android:src="@drawable/group_19_2"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:onClick="BackClicked"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="4월 29일 스케줄"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/header_title_txt"
+            android:letterSpacing="-0.02"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:text="수정"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/header_positive_btn_txt"
+            android:letterSpacing="-0.01"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@color/transparent"
+            android:onClick="SaveClicked"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/custom_calendar_schedule_icon_back"
+        android:alpha="0.2"/>
+    
+    <ImageView
+        android:src="@drawable/ic_calendar_black_16"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginStart="31dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="20dp"
+        android:text="투들 프로젝트"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        android:textColor="@color/calendar_project_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="142dp"
+        android:layout_marginStart="20dp"
+        android:text="[완성하기 프로젝트 \n2줄케이스 스케줄의 이름입니다."
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/calendar_content_title"
+        android:letterSpacing="-0.03"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:layout_marginStart="20dp"
+        android:text="2020년 4월 29일 (화) 오후 3시부터 5시까지"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        android:textColor="@color/calendar_date_txt"
+        android:letterSpacing="-0.01"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_calendar_schedule_icon_back"
+            android:alpha="0.07"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:textSize="14dp"
+            android:text="메모 정보 입력한 곳입니다."
+            android:textStyle="normal"
+            android:textColor="@color/calendar_memo_txt"
+            android:letterSpacing="-0.04"/>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_calendar_schedule_delete_button_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="14dp"
+            android:text="스케줄 삭제하기"
+            android:textStyle="bold"
+            android:textColor="@color/calendar_schedule_delete_button_txt"
+            android:letterSpacing="-0.02"/>
+        
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

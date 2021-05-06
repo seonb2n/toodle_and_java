@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_back">
+
+    <ScrollView
+        android:id="@+id/addTask_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="75dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/add_key_title"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_key_txt"/>
+
+                <EditText
+                    android:id="@+id/title_EditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="90dp"
+                    android:hint="@string/add_value_title_hint"
+                    android:textColorHint="@color/add_value_hint_txt"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_value_txt"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:background="@drawable/custom_edit_text_basic_back"/>
+
+                <RelativeLayout
+                    android:id="@+id/titleDelete_Layout"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:src="@drawable/ic_all_delete"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:onClick="TaskTitleDeleteClicked"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_marginTop="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/add_key_importance"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_key_txt"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="83dp"
+                    android:layout_marginStart="90dp">
+
+                    <RelativeLayout
+                        android:layout_width="83dp"
+                        android:layout_height="83dp">
+
+                        <RelativeLayout
+                            android:layout_width="74dp"
+                            android:layout_height="74dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/custom_task_importance_back">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:src="@drawable/ic_importance_high_black_16"
+                                    android:layout_width="44dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="@string/add_task_importance_5"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:textColor="@color/add_value_txt"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/taskImportanceSelect5_Layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="76dp"
+                                android:layout_height="76dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/custom_task_importance_select_back"/>
+
+                            <ImageView
+                                android:src="@drawable/ic_importance_select"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"/>
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:onClick="TaskImportance5Clicked"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                    <RelativeLayout
+                        android:layout_width="83dp"
+                        android:layout_height="83dp">
+
+                        <RelativeLayout
+                            android:layout_width="74dp"
+                            android:layout_height="74dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/custom_task_importance_back">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:src="@drawable/ic_importance_mid_black_16"
+                                    android:layout_width="44dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="@string/add_task_importance_3"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:textColor="@color/add_value_txt"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/taskImportanceSelect3_Layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="76dp"
+                                android:layout_height="76dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/custom_task_importance_select_back"/>
+
+                            <ImageView
+                                android:src="@drawable/ic_importance_select"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"/>
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:onClick="TaskImportance3Clicked"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                    <RelativeLayout
+                        android:layout_width="83dp"
+                        android:layout_height="83dp">
+
+                        <RelativeLayout
+                            android:layout_width="74dp"
+                            android:layout_height="74dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/custom_task_importance_back">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:src="@drawable/ic_importance_low_black_16"
+                                    android:layout_width="44dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="@string/add_task_importance_1"
+                                    android:textSize="12dp"
+                                    android:textStyle="normal"
+                                    android:textColor="@color/add_value_txt"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/taskImportanceSelect1_Layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="76dp"
+                                android:layout_height="76dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/custom_task_importance_select_back"/>
+
+                            <ImageView
+                                android:src="@drawable/ic_importance_select"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"/>
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:onClick="TaskImportance1Clicked"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/add_key_project"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/add_key_txt"/>
+
+                    <ImageView
+                        android:id="@+id/selectProject_Img"
+                        android:src="@drawable/custom_project_circle_null"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="90dp"/>
+
+                    <TextView
+                        android:id="@+id/selectProject_Txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="116dp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/add_schedule_set_project_default"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/add_value_txt"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_select_list"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/transparent"
+                        android:onClick="TaskProjectSetClicked"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="90dp"
+                        android:background="@color/add_value_hint_line"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="17dp"
+                    android:text="@string/add_key_task_during"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_key_txt"/>
+
+                <TextView
+                    android:id="@+id/taskEndDate_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="34dp"
+                    android:text="@string/add_task_end_date"
+                    android:textSize="11dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/add_key_txt"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="90dp">
+
+                    <TextView
+                        android:id="@+id/fromToday_Txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/add_task_start_date_today"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/add_value_hint_txt"/>
+
+                    <TextView
+                        android:id="@+id/taskDuring_Txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/fromToday_Txt"
+                        android:layout_marginStart="5dp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/add_task_during_day"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/add_value_txt"/>
+
+                    <RelativeLayout
+                        android:id="@+id/taskDuringEdit_Layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/fromToday_Txt"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/basic_back"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/taskDuring_EditTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/add_value_txt"
+                            android:maxLines="1"
+                            android:inputType="number"
+                            android:imeOptions="actionDone"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/taskDuring_EditTxt"
+                            android:layout_marginStart="2dp"
+                            android:layout_centerVertical="true"
+                            android:text="@string/add_task_during_day_hint"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/add_value_hint_bright_txt"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:src="@drawable/ic_stepper_up"
+                        android:layout_width="34dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"/>
+
+                    <Button
+                        android:layout_width="44dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/transparent"
+                        android:onClick="EndDatePlusClicked"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_stepper_down"
+                        android:layout_width="34dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="58dp"/>
+
+                    <Button
+                        android:layout_width="44dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="58dp"
+                        android:background="@color/transparent"
+                        android:onClick="EndDateMinusClicked"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/taskDuringShadow_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_task_during_hide_shadow_back"
+                    android:visibility="gone"
+                    android:onClick="TaskDuringShadowClicked"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/taskDuring_RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginBottom="12dp"
+                    android:scrollbars="none"/>
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/custom_task_during_recycler_shadow"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="90dp"
+                    android:background="@color/add_value_hint_line"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/action_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/add_key_action"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/add_key_txt"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionItem_Layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/addTaskAction_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/add_task_action_add"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_value_txt"/>
+
+                <ImageView
+                    android:src="@drawable/ic_add_section"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/transparent"
+                    android:onClick="ActionAddClicked"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="90dp"
+                    android:background="@color/add_value_hint_line"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/custom_add_fast_bottom_shadow"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/custom_bottom_submit_btn_back">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:src="@drawable/ic_check_white_20"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@string/add_task_add"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/bottom_submit_btn_txt"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:onClick="TaskAddClicked"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

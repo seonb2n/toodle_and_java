@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/postit_category_dialog_title"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/dialog_title_txt"/>
+
+    <ListView
+        android:id="@+id/postitCategory_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"/>
+
+</LinearLayout>

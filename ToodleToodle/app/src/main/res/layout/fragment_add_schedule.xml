@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_back">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/datePicker_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="136dp"
+                    android:background="@drawable/custom_date_picker_back"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="26dp"
+                            android:src="@drawable/ic_check_16" />
+
+                        <TextView
+                            android:id="@+id/dayLater_Txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="46dp"
+                            android:text="@string/add_value_date_day"
+                            android:textColor="@color/add_value_txt"
+                            android:textSize="12dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="26dp"
+                            android:background="@color/add_value_select_line" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="117dp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="27dp">
+
+                        <NumberPicker
+                            android:id="@+id/dateYear_Picker"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:selectionDividerHeight="0dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/add_schedule_unit_year"
+                            android:textColor="@color/add_value_txt"
+                            android:textSize="12dp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <NumberPicker
+                            android:id="@+id/dateMonth_Picker"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:selectionDividerHeight="0dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/add_schedule_unit_month"
+                            android:textColor="@color/add_value_txt"
+                            android:textSize="12dp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <NumberPicker
+                            android:id="@+id/dateDay_Picker"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:selectionDividerHeight="0dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/add_schedule_unit_day"
+                            android:textColor="@color/add_value_txt"
+                            android:textSize="12dp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/dayOfWeek_Txt"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/custom_dark_circle"
+                            android:gravity="center"
+                            android:text="@string/add_schedule_unit_day"
+                            android:textColor="@color/add_value_txt"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="136dp"
+                    android:background="@color/basic_back"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="86dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/add_key_date"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/add_key_txt"/>
+
+                    <TextView
+                        android:id="@+id/selectDate_Txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="90dp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/add_value_date"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/add_value_txt"/>
+
+                    <ImageView
+                        android:id="@+id/datePickerFoldBtn_Img"
+                        android:src="@drawable/ic_dropdown_20"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/selectDate_Txt"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/transparent"
+                        android:onClick="DatePickerClicked"/>
+
+                    <View
+                        android:id="@+id/dateLine_View"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="90dp"
+                        android:background="@color/add_value_hint_line"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/add_key_title"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_key_txt"/>
+
+                <EditText
+                    android:id="@+id/title_EditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="90dp"
+                    android:hint="@string/add_value_title_hint"
+                    android:textColorHint="@color/add_value_hint_txt"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_value_txt"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:background="@drawable/custom_edit_text_basic_back"/>
+
+                <RelativeLayout
+                    android:id="@+id/titleDelete_Layout"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:src="@drawable/ic_all_delete"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:onClick="ScheduleTitleDeleteClicked"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:text="@string/add_key_time"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/add_key_txt"/>
+
+            <TextView
+                android:id="@+id/selectTime_Txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_centerVertical="true"
+                android:text="@string/add_value_time_hint"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:textColor="@color/add_value_hint_txt"/>
+
+            <ImageView
+                android:id="@+id/timePickerBtn_Img"
+                android:src="@drawable/ic_time_setting"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="90dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/transparent"
+                android:onClick="TimePickerClicked"/>
+
+            <View
+                android:id="@+id/timeLine_View"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="90dp"
+                android:background="@color/add_value_hint_line"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:id="@+id/projectAdd_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/add_schedule_set_project"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_value_txt"/>
+
+                <ImageView
+                    android:src="@drawable/ic_add_section"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/transparent"
+                    android:onClick="ScheduleProjectAddClicked"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="90dp"
+                    android:background="@color/add_value_hint_line"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/projectSet_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/add_key_project"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_key_txt"/>
+
+                <ImageView
+                    android:id="@+id/selectProject_Img"
+                    android:src="@drawable/custom_project_circle_null"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="90dp"/>
+
+                <TextView
+                    android:id="@+id/selectProject_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="116dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/add_schedule_set_project_default"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/add_value_txt"/>
+
+                <ImageView
+                    android:src="@drawable/ic_select_list"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/transparent"
+                    android:onClick="ScheduleProjectSetClicked"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="90dp"
+                    android:background="@color/add_value_hint_line"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="26dp">
+
+            <RelativeLayout
+                android:id="@+id/contentAdd_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/add_schedule_set_content"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_value_txt"/>
+
+                <ImageView
+                    android:src="@drawable/ic_add_section"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="90dp"
+                    android:background="@color/add_value_hint_line"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/transparent"
+                    android:onClick="ScheduleContentAddClicked"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/contentSet_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="17dp"
+                    android:text="@string/add_key_content"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_key_txt"/>
+
+                <EditText
+                    android:id="@+id/content_EditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="90dp"
+                    android:hint="@string/add_value_content_hint"
+                    android:textColorHint="@color/add_value_hint_txt"
+                    android:textSize="15dp"
+                    android:textColor="@color/add_value_txt"
+                    android:inputType="text"
+                    android:background="@drawable/custom_edit_text_basic_back"/>
+
+                <ImageView
+                    android:src="@drawable/ic_select_remove"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"/>
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/transparent"
+                    android:onClick="ScheduleContentDeleteClicked"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/custom_bottom_submit_btn_back">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:src="@drawable/ic_check_white_20"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@string/add_schedule_add"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/bottom_submit_btn_txt"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:onClick="ScheduleAddClicked"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

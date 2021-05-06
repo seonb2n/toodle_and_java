@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_Layout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="6dp"
+    android:background="@drawable/custom_task_during_item_back">
+
+    <TextView
+        android:id="@+id/day_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/task_during_item_txt"/>
+
+</RelativeLayout>

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_back">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:text="@string/add_key_title"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/add_key_txt"/>
+
+            <EditText
+                android:id="@+id/title_EditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="90dp"
+                android:hint="@string/add_value_title_hint"
+                android:textColorHint="@color/add_value_hint_txt"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/add_value_txt"
+                android:maxLines="1"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:background="@drawable/custom_edit_text_basic_back"/>
+
+            <RelativeLayout
+                android:id="@+id/titleDelete_Layout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_all_delete"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="PostitTitleDeleteClicked"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:text="@string/add_key_category"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/add_key_txt"/>
+
+            <RelativeLayout
+                android:id="@+id/postitCategoryAdd_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/postit_category_hint"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/add_value_hint_txt"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/postitCategorySet_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="90dp"
+                    android:background="@drawable/custom_postit_icon_back">
+
+                    <ImageView
+                        android:id="@+id/postitCategoryIcon_Img"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/postitCategoryTitle_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="126dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/add_value_txt"/>
+
+                <TextView
+                    android:id="@+id/postitCategoryContent_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="126dp"
+                    android:layout_marginTop="26dp"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/dialog_bottom_sheet_item_content_txt"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="90dp"
+                android:background="@color/add_value_hint_line"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="16dp">
+
+            <RelativeLayout
+                android:id="@+id/postitCategory1_Layout"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/custom_postit_icon_back">
+
+                    <ImageView
+                        android:id="@+id/postitCategory1_Img"
+                        android:src="@drawable/ic_postit_category_01_32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postitCategorySelect1_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/custom_postit_category_select_back"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_importance_select"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="ProjectCategory1Clicked"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/postitCategory2_Layout"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/custom_postit_icon_back">
+
+                    <ImageView
+                        android:id="@+id/postitCategory2_Img"
+                        android:src="@drawable/ic_postit_category_01_32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postitCategorySelect2_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/custom_postit_category_select_back"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_importance_select"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="ProjectCategory2Clicked"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/postitCategory3_Layout"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/custom_postit_icon_back">
+
+                    <ImageView
+                        android:id="@+id/postitCategory3_Img"
+                        android:src="@drawable/ic_postit_category_01_32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postitCategorySelect3_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/custom_postit_category_select_back"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_importance_select"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="ProjectCategory3Clicked"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/postitCategory4_Layout"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/custom_postit_icon_back">
+
+                    <ImageView
+                        android:id="@+id/postitCategory4_Img"
+                        android:src="@drawable/ic_postit_category_01_32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postitCategorySelect4_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/custom_postit_category_select_back"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_importance_select"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="ProjectCategory4Clicked"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/postitCategoryRow_Layout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/postitCategory5_Layout"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/custom_postit_icon_back">
+
+                    <ImageView
+                        android:id="@+id/postitCategory5_Img"
+                        android:src="@drawable/ic_postit_category_01_32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postitCategorySelect5_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/custom_postit_category_select_back"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_importance_select"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="ProjectCategory5Clicked"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/postitCategory6_Layout"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/custom_postit_icon_back">
+
+                    <ImageView
+                        android:id="@+id/postitCategory6_Img"
+                        android:src="@drawable/ic_postit_category_01_32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postitCategorySelect6_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/custom_postit_category_select_back"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_importance_select"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="ProjectCategory6Clicked"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/postitCategory7_Layout"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/custom_postit_icon_back">
+
+                    <ImageView
+                        android:id="@+id/postitCategory7_Img"
+                        android:src="@drawable/ic_postit_category_01_32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postitCategorySelect7_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/custom_postit_category_select_back"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_importance_select"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="ProjectCategory7Clicked"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/postitCategory8_Layout"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/custom_postit_icon_back">
+
+                    <ImageView
+                        android:id="@+id/postitCategory8_Img"
+                        android:src="@drawable/ic_postit_category_01_32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/postitCategorySelect8_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/custom_postit_category_select_back"/>
+
+                    <ImageView
+                        android:src="@drawable/ic_importance_select"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="ProjectCategory8Clicked"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="52dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/postit_category_add_hint"
+            android:textSize="12dp"
+            android:textStyle="normal"
+            android:textColor="@color/add_content_hint_txt"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/custom_bottom_submit_btn_back">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:src="@drawable/ic_check_white_20"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@string/postit_add"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/bottom_submit_btn_txt"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:onClick="PostitAddClicked"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bright_back">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:text="@string/today_title"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:textColor="@color/header_bright_txt"/>
+        
+        <Button
+            android:layout_width="74dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:text="@string/header_add_fast_btn"
+            android:textSize="13dp"
+            android:textStyle="normal"
+            android:textColor="@color/header_add_btn_txt"
+            android:background="@drawable/custom_header_add_btn"
+            android:onClick="AddFastClicked"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="56dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/postit_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"/>
+
+        <RelativeLayout
+            android:id="@+id/postitNull_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/postit_null_txt"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/postit_null_txt"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="PostitNullClicked"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/layout_footer"/>
+
+</RelativeLayout>

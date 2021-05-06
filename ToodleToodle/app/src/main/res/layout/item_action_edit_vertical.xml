@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginBottom="10dp">
+
+    <EditText
+        android:id="@+id/title_EditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:paddingBottom="10dp"
+        android:textSize="15dp"
+        android:textColor="@color/add_value_txt"
+        android:lineHeight="50dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:background="@drawable/custom_edit_text_basic_back"/>
+
+    <ImageView
+        android:src="@drawable/ic_select_remove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"/>
+
+    <Button
+        android:id="@+id/titleDelete_Btn"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@color/transparent"/>
+
+</RelativeLayout>

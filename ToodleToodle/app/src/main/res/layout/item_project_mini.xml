@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginBottom="2dp"
+    android:background="@color/dialog_bottom_sheet_item">
+
+    <RelativeLayout
+        android:id="@+id/project_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/projectColor_Img"
+            android:src="@drawable/custom_project_circle_null"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/title_Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="45dp"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:textColor="@color/dialog_bottom_sheet_title_txt"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noProject_Txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical"
+        android:text="@string/project_no_project"
+        android:textSize="14dp"
+        android:textStyle="normal"
+        android:textColor="@color/dialog_content_txt"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/check_Img"
+        android:src="@drawable/ic_check_black_24"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"/>
+
+</RelativeLayout>

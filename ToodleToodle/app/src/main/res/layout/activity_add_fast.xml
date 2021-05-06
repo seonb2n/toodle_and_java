@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_back">
+
+    <RelativeLayout
+        android:id="@+id/init_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/header_bright_back">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/add_fast_title"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/header_title_txt"/>
+
+            <ImageView
+                android:src="@drawable/ic_back_black_26"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="BackClicked"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="76dp"
+            android:text="@string/add_fast_sub_title"
+            android:textSize="24dp"
+            android:textStyle="normal"
+            android:textColor="@color/header_sub_title_txt"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="3dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:background="@drawable/custom_basic_circle"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:src="@drawable/ic_add_screen_task"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:text="@string/add_fast_task"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/header_content_txt"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="126dp"
+                    android:gravity="center"
+                    android:text="@string/add_fast_task_content"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/header_sub_content_txt"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@color/transparent"
+                    android:onClick="InitTaskClicked"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:background="@drawable/custom_basic_circle"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:src="@drawable/ic_add_screen_schedule"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:text="@string/add_fast_schedule"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/header_content_txt"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="126dp"
+                    android:gravity="center"
+                    android:text="@string/add_fast_schedule_content"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/header_sub_content_txt"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@color/transparent"
+                    android:onClick="InitScheduleClicked"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:background="@drawable/custom_basic_circle"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:src="@drawable/ic_add_screen_postit"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:text="@string/add_fast_postit"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/header_content_txt"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="126dp"
+                    android:gravity="center"
+                    android:text="@string/add_fast_postit_content"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/header_sub_content_txt"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@color/transparent"
+                    android:onClick="InitPostitClicked"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/header_bright_back">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:text="@string/header_cancel_btn"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/header_positive_btn_txt"/>
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@color/transparent"
+                android:onClick="CancelClicked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/add_fast_title"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/header_title_txt"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/fastAdd_TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="56dp"
+            android:background="@color/tab_back_default"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="36dp"
+            app:tabIndicatorColor="@color/tab_back_active"/>
+
+        <com.origincurly.toodletoodle.ui.NonSwipeViewPager
+            android:id="@+id/fastAdd_ViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="92dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop= "56dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="156dp"
+        android:text="@string/nick_set_content"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        android:textColor="@color/user_content_txt"
+        android:lineSpacingExtra="3dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="234dp">
+
+        <EditText
+            android:id="@+id/nick_EditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/user_nick_hint"
+            android:textColorHint="@color/user_edit_hint"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            android:textColor="@color/user_edit_txt"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:background="@drawable/custom_edit_text_transparent_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/user_nick_regex"
+            android:textSize="13dp"
+            android:textStyle="normal"
+            android:textColor="@color/user_notice_txt"/>
+
+        <TextView
+            android:id="@+id/userMsg_Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="13dp"
+            android:textStyle="normal"
+            android:textColor="@color/user_msg_txt"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/nickSetBtn_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/custom_submit_btn_default">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/nick_set_set_btn"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/user_basic_txt"/>
+
+            <ImageView
+                android:id="@+id/nickSetBtn_Img"
+                android:src="@drawable/ic_next_default_20"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="6dp"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:onClick="NickSetClicked"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

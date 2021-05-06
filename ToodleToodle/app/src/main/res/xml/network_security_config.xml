@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">http://toodletoodle.cafe24.com</domain>
+        <domain includeSubdomains="true">toodletoodle.cafe24.com</domain>
+        <domain includeSubdomains="true">www.sample.com</domain>
+    </domain-config>
+</network-security-config>

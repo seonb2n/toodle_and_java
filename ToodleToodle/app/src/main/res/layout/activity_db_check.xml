@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/db_check_back">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:src="@drawable/ic_tab_project_active"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/title_Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/db_check_title_0"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/db_check_title_txt"/>
+
+        <TextView
+            android:id="@+id/content_Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/db_check_content_0"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/db_check_content_txt"/>
+        
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/progress_PrgBar"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:indeterminate="false"
+                android:progress="10"
+                android:progressDrawable="@drawable/custom_db_check_progress_bar" />
+
+            <TextView
+                android:id="@+id/progress_Txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/db_check_percent_default"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/db_check_progress_txt"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

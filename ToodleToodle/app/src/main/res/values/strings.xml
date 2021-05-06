@@ -1,0 +1,310 @@
+<resources>
+
+    <!--region COMMON-->
+
+    <string name="app_name">투들</string>
+    <string name="default_notification_channel_id">toodletoodle</string>
+    <string name="default_notification_channel_name">ToodleToodle</string>
+
+    <!--header-->
+    <string name="header_add_fast_btn">빠른 추가</string>
+
+    <!--footer-->
+    <string name="footer_today">TODAY</string>
+    <string name="footer_project">PROJECT</string>
+    <string name="footer_calendar">CALENDAR</string>
+    <string name="footer_my">MY</string>
+
+    <!--message-->
+    <string name="msg_app_exit">\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.</string>
+    <string name="msg_server_error">서버와의 연결이 좋지 않습니다.</string>
+    <string name="msg_server_error_redo">서버와의 연결이 좋지 않습니다. 다시 시도해주시기 바랍니다.</string>
+    <string name="msg_login_error">로그인 정보가 올바르지 않습니다. 다시 로그인 해주시기 바랍니다.</string>
+    <string name="msg_pull_to_refresh">페이지를 새로고침 합니다.</string>
+
+    <string name="msg_error_debug">[%s] ERROR:%s</string>
+
+    <!--endregion-->
+
+    <!--region dialog-->
+    <string name="dialog_topic_warning">경고</string>
+    <string name="dialog_topic_notice">알림</string>
+    <string name="dialog_topic_confirm">확인</string>
+
+    <string name="dialog_version_update_title">업데이트가 필요합니다.</string>
+    <string name="dialog_version_update_content">만료된 버전입니다.\n앱을 업데이트 해주세요.</string>
+    <string name="dialog_version_update_positive_btn">업데이트</string>
+    <string name="dialog_version_update_negative_btn">종료</string>
+
+    <string name="dialog_nick_cancel_title">닉네임 입력을 취소할까요?</string>
+    <string name="dialog_nick_cancel_content">닉네임을 입력하셔야\n이용하실 수 있습니다.</string>
+    <string name="dialog_nick_cancel_positive_btn">네 (로그아웃)</string>
+    <string name="dialog_nick_cancel_negative_btn">돌아가기</string>
+
+    <string name="dialog_begin_end_cancel_title">시간 설정을 취소할까요?</string>
+    <string name="dialog_begin_end_cancel_content">시작과 종료를 설정하셔야\n이용하실 수 있습니다.</string>
+    <string name="dialog_begin_end_cancel_positive_btn">네 (로그아웃)</string>
+    <string name="dialog_begin_end_cancel_negative_btn">돌아가기</string>
+
+    <string name="dialog_logout_title">로그아웃 하시겠습니까?</string>
+    <string name="dialog_logout_content">기기에서 로그아웃 됩니다.</string>
+    <string name="dialog_logout_positive_btn">네</string>
+    <string name="dialog_logout_negative_btn">아니오</string>
+
+    <string name="dialog_postit_cancel_title">저장안한 포스팃이 있어요!</string>
+    <string name="dialog_postit_cancel_content">뒤로가시면 입력한\n데이터는 복구할 수 없어요.</string>
+    <string name="dialog_postit_cancel_positive_btn">네, 할게요.</string>
+    <string name="dialog_postit_cancel_negative_btn">돌아가기</string>
+
+    <string name="dialog_add_fast_cancel_title">정말로 취소할까요?</string>
+    <string name="dialog_add_fast_cancel_content">지금 취소하시면 입력한\n데이터는 복구할 수 없어요.</string>
+    <string name="dialog_add_fast_cancel_positive_btn">네, 할게요.</string>
+    <string name="dialog_add_fast_cancel_negative_btn">돌아가기</string>
+
+    <!--endregion-->
+
+    <!--region USER-->
+    <!--common-->
+    <string name="user_mail_hint">이메일 입력</string>
+    <string name="user_pw_hint">비밀번호 입력</string>
+    <string name="user_pw_re_hint">비밀번호 확인</string>
+    <string name="user_nick_hint">닉네임 입력</string>
+
+    <string name="user_pw_regex">비밀번호는 4자 이상 20자 미만, 영문과 숫자가 포함 되어야 하며 대소문자를 구별합니다.\n※특수문자는 ~!@#$%^&amp;*_-를 입력하실 수 있습니다.</string>
+    <string name="user_nick_regex">닉네임은 2자 이상 8자 미만으로\n한글, 영문, 숫자 모두 입력가능해요.</string>
+
+    <!--common message-->
+    <string name="msg_user_mail_null">메일을 입력해주세요.</string>
+    <string name="msg_user_mail_regex_wrong">메일 형식에 맞지 않습니다.</string>
+    <string name="msg_user_pw_null">비밀번호를 입력해주세요.</string>
+    <string name="msg_user_pw_length_wrong">비밀번호는 4자 이상 20자 이하로 입력해주세요.</string>
+    <string name="msg_user_pw_regex_wrong">비밀번호가 형식에 맞지 않습니다.</string>
+    <string name="msg_user_pw_re_null">비밀번호 확인을 입력해주세요.</string>
+    <string name="msg_user_pw_re_wrong">비밀번호 확인이 같지 않습니다.</string>
+    <string name="msg_user_nick_null">닉네임을 입력해주세요.</string>
+    <string name="msg_user_nick_length_wrong">닉네임은 2자 이상 8자 이하로 입력해주세요.</string>
+    <string name="msg_user_nick_regex_wrong">닉네임이 형식에 맞지 않습니다.</string>
+    <string name="msg_user_nick_wrong">사용하실 수 없는 닉네임 입니다.</string>
+
+    <!--login-->
+    <string name="login_login_btn">로그인</string>
+
+    <string name="login_find_btn">비밀번호 찾기</string>
+    <string name="login_join_mail_btn">이메일 회원가입</string>
+    <string name="login_social_btn">소셜 로그인 / 가입</string>
+
+    <string name="login_naver_login_btn">네이버</string>
+    <string name="login_kakao_login_btn">카카오</string>
+    <string name="login_google_login_btn">구글</string>
+
+    <!--login message-->
+    <string name="msg_login_mail_wrong">존재하지 않는 메일입니다.</string>
+    <string name="msg_login_pw_wrong">비밀번호가 틀렸습니다.</string>
+
+    <!--join_mail-->
+    <string name="join_mail_title">이메일 회원 가입</string>
+    <string name="join_mail_join_btn">회원가입하기</string>
+
+    <!--join_mail message-->
+    <string name="msg_join_mail_mail_duplicate">이미 가입된 메일 입니다.</string>
+
+    <!--nick_set-->
+    <string name="nick_set_title">닉네임 입력</string>
+    <string name="nick_set_content">서비스 이용을 위해\n닉네임을 입력해주세요</string>
+
+    <string name="nick_set_set_btn">다음</string>
+
+    <!--begin_end_set-->
+    <string name="begin_end_set_content">%s님.\n하루의 시작과 종료를 설정할까요?</string>
+    <string name="begin_end_set_hint">하루의 시작과 종료 시간 설정은,\n계획을 세울 때 더 빠르게 세울 수 있도록 도와줘요 :-)</string>
+    <string name="begin_end_set_btn">설정하고 시작하기.</string>
+
+    <string name="begin_end_today">하루의</string>
+    <string name="begin_end_today_begin_time">시작 시간은</string>
+    <string name="begin_end_today_end_time">종료 시간은</string>
+    <string name="begin_end_time_hint">시간선택</string>
+
+    <string name="begin_end_time_select">%s %s시 %s분</string>
+
+    <string name="begin_end_unit_am">오전</string>
+    <string name="begin_end_unit_pm">오후</string>
+    <string name="begin_end_unit_hour">시</string>
+    <string name="begin_end_unit_minute">분</string>
+
+    <!--begin_end_set message-->
+
+    <!--find-->
+    <string name="find_title">비밀번호 찾기</string>
+    <string name="find_content">가입하신 이메일로 비밀번호 변경 링크를 보내드립니다.\n가입하신 이메일을 입력해주세요.</string>
+    <string name="find_find_btn">비밀번호 변경</string>
+
+    <string name="find_end_content">가입하신 이메일로 비밀번호 변경 링크를 보내드렸습니다. 메일이 도착하지 않는 경우 스팸함을 확인해 보시고 이 현상이 반복되면 문의 부탁드립니다.</string>
+    <string name="find_end_btn">로그인 하러 가기</string>
+
+    <!--find message-->
+    <string name="msg_find_mail_wrong">존재하지 않는 메일입니다.</string>
+
+
+    <!--db_check-->
+    <string name="db_check_title_0">투들을 만들고 있습니다. 유저체크</string>
+    <string name="db_check_title_1">투들을 만들고 있습니다. 포스팃 체크</string>
+    <string name="db_check_title_2">투들을 만들고 있습니다. 포스팃 생성</string>
+    <string name="db_check_title_3">투들을 만들고 있습니다. 포스팃 카테고리 체크</string>
+    <string name="db_check_title_4">투들을 만들고 있습니다. 포스팃 카테고리 생성</string>
+    <string name="db_check_title_5">투들을 만들고 있습니다. 프로젝트 체크</string>
+    <string name="db_check_title_6">투들을 만들고 있습니다. 프로젝트 생성</string>
+    <string name="db_check_title_7">투들을 만들고 있습니다. 최종 상태 제출(완료)</string>
+
+    <string name="db_check_content_0">투들을 만들고 있습니다. 내용</string>
+    <string name="db_check_content_1">투들을 만들고 있습니다. 내용</string>
+    <string name="db_check_content_2">투들을 만들고 있습니다. 내용</string>
+    <string name="db_check_content_3">투들을 만들고 있습니다. 내용</string>
+    <string name="db_check_content_4">투들을 만들고 있습니다. 내용</string>
+    <string name="db_check_content_5">투들을 만들고 있습니다. 내용</string>
+    <string name="db_check_content_6">투들을 만들고 있습니다. 내용</string>
+    <string name="db_check_content_7">투들을 만들고 있습니다. 내용</string>
+
+    <string name="db_check_percent_default">0%</string>
+
+    <!--db_check message-->
+    <string name="msg_db_check_user_wrong">유저 정보가 없어 로그인이 필요합니다.</string>
+    <string name="msg_db_check_need">필수적인 정보가 없어 확인이 필요합니다.</string>
+
+
+    <!--endregion-->
+
+    <!--region MAIN -->
+    <string name="today_title">today</string>
+    <string name="project_title">project</string>
+    <string name="header_save_btn">저장</string>
+    <string name="header_cancel_btn">취소</string>
+
+    <!--add_fast-->
+    <string name="add_fast_title">빠른 추가</string>
+    <string name="add_fast_sub_title">추가할\n항목을 골라보세요.</string>
+
+    <string name="add_fast_task">태스크</string>
+    <string name="add_fast_schedule">스케줄</string>
+    <string name="add_fast_postit">포스트잇</string>
+    <string name="add_fast_task_content">기간단위로 할 일을\n추가합니다.</string>
+    <string name="add_fast_schedule_content">특정시간에\n일정을 추가합니다</string>
+    <string name="add_fast_postit_content">기억하고 싶은\n특정 일을 추가합니다.</string>
+
+    <string name="add_key_title">이름</string>
+    <string name="add_value_title_hint">이름을 입력해주세요.</string>
+    <string name="add_key_importance">중요도</string>
+    <string name="add_key_task_during">작업 기간</string>
+    <string name="add_key_action">액션</string>
+    <string name="add_key_date">날짜 설정</string>
+    <string name="add_value_date">%s.%s.%s (%s)로 설정됨</string>
+    <string name="add_value_date_day"><b>%d일</b> 뒤</string>
+    <string name="add_key_time">시간 설정</string>
+    <string name="add_value_time_hint">시간을 설정해주세요.</string>
+    <string name="add_value_time">%s부터 %s까지</string>
+    <string name="add_key_project">소속</string>
+    <string name="add_key_content">메모</string>
+    <string name="add_value_content_hint">메모를 입력해주세요.</string>
+    <string name="add_key_category">카테고리</string>
+
+    <!--task-->
+    <string name="add_task_importance_1">낮음</string>
+    <string name="add_task_importance_3">중간</string>
+    <string name="add_task_importance_5">높음</string>
+
+    <string name="add_task_end_date">%s.%s까지</string>
+    <string name="add_task_start_date_today">오늘부터</string>
+    <string name="add_task_during_day"><u>%d일간</u></string>
+    <string name="add_task_during_day_hint">일간</string>
+    <string name="add_task_set_date_no">기간 설정 안함</string>
+    <string name="add_task_end_date_day">%d일</string>
+
+    <string name="add_task_action_add">액션 추가하기</string>
+    <string name="add_task_action_add_more">액션 더 추가하기</string>
+
+    <string name="add_task_add">태스크 추가하기</string>
+
+    <!--task message-->
+    <string name="msg_task_length_max_wrong">기간은 365일보다 높을 수 없습니다.</string>
+    <string name="msg_task_length_min_wrong">기간은 -365일보다 낮을 수 없습니다.</string>
+    <string name="msg_task_title_length_wrong">이름은 15자 이내로 입력해주세요.</string>
+    <string name="msg_action_title_length_wrong">액션은 15자 이내로 입력해주세요.</string>
+
+    <!--Schedule-->
+
+    <string name="add_schedule_set_project">프로젝트에 소속하기</string>
+    <string name="add_schedule_set_project_default">소속 프로젝트 없음</string>
+    <string name="add_schedule_set_content">메모 추가하기</string>
+    <string name="add_schedule_add">스케줄 추가하기</string>
+
+    <string name="add_schedule_unit_year">년</string>
+    <string name="add_schedule_unit_month">월</string>
+    <string name="add_schedule_unit_day">일</string>
+
+    <!--Schedule message-->
+    <string name="msg_schedule_title_null">이름을 입력해주세요.</string>
+    <string name="msg_schedule_title_length_wrong">이름을 15자 이내로 입력해주세요.</string>
+    <string name="msg_schedule_content_length_wrong">메모를 200자 이내로 입력해주세요.</string>
+    <string name="msg_schedule_add_end">스케줄을 추가하였습니다.</string>
+
+    <!--postit-->
+    <string name="postit_title">Post it</string>
+    <string name="postit_sub_title">기록한 일들을\n잊은 건 없으세요?</string>
+    <string name="postit_sub_title_add">꼭 기억해야할 것을\n기록해보세요.</string>
+
+    <string name="postit_null_txt">Post it이 없습니다!</string>
+    <string name="postit_end_btn"><u>완료하기</u></string>
+    <string name="postit_revert_btn">되돌리기</string>
+    <string name="postit_time_just">방금 전</string>
+    <string name="postit_time_today">오늘</string>
+    <string name="postit_time_yesterday">어제</string>
+    <string name="postit_time_ago">%d일 전</string>
+    <string name="postit_add_ready_txt">기억해야할 일 입력하기</string>
+    <string name="postit_category_hint">카테고리를 골라주세요.</string>
+
+    <string name="postit_add">포스트잇 추가하기</string>
+    <string name="postit_category_add_hint">카테고리의 사용자화는 나의 공간에서 가능합니다.</string>
+
+    <!--postit message-->
+    <string name="msg_postit_end">포스트잇 %s개를 완료했어요 :)</string>
+    <string name="msg_postit_add">포스트잇을 추가했어요!</string>
+    <string name="msg_postit_save">포스트잇을 저장했어요!</string>
+    <string name="msg_postit_null">포스트잇 내용을 입력해주세요.</string>
+    <string name="msg_postit_regex_wrong">특수문자는 .,/?+~!@#$&amp;*()_-만 입력하실 수 있습니다.</string>
+    <string name="msg_postit_length_wrong">포스트잇은 15자 까지 입력하실 수 있습니다.</string>
+    <string name="msg_postit_add_end">포스트잇을 추가하였습니다.</string>
+
+    <!--postit_category-->
+    <string name="postit_category_dialog_title">카테고리 선택</string>
+    <string name="postit_category_no_category">카테고리 없음</string>
+    <string name="msg_postit_category_load">카테고리 정보를 불러오고 있습니다.</string>
+
+    <!--project-->
+    <string name="project_dialog_title">소속 프로젝트 선택</string>
+    <string name="project_no_project">소속된 프로젝트 없음</string>
+    <string name="project_null">프로젝트를 추가해\n태스크를 보다\n효율적으로 관리해 보세요.</string>
+    <string name="project_header_add_btn">추가</string>
+    <string name="project_no_project_task">프로젝트에 소속되지 않은 태스크</string>
+    <string name="project_no_project_task_count">%d개</string>
+
+    <string name="project_tab_count_txt">(%d)</string>
+
+    <string name="project_item_d_day">D%s</string>
+    <string name="project_item_percent">%d%</string>
+    <string name="project_item_task">테스크</string>
+    <string name="project_item_task_count">%d개 테스크</string>
+    <string name="project_item_done">%s 완료함</string>
+
+    <!--project message-->
+    <string name="msg_project_auth_wrong">프로젝트를 조회할 권한이 없습니다.</string>
+    <string name="msg_project_id_list_load">프로젝트 정보를 불러오고 있습니다.</string>
+
+    <!--endregion-->
+
+
+
+    <!--연 추가 project-->
+
+    <!--endregion-->
+
+
+</resources>
