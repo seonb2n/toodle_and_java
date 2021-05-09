@@ -565,7 +565,8 @@ public class AddFastTaskFragment extends BasicFragment {
 
     //region api
 
-    private int projectIndex, numberId, projectId;
+    private int projectIndex, projectId;
+    private String numberId;
 
     private class ProjectIdListTask extends AsyncTask<Void, Void, String> {
         @Override
@@ -642,7 +643,7 @@ public class AddFastTaskFragment extends BasicFragment {
 
                     ProjectItem item = new ProjectItem();
 
-                    item.numberId = jsonObject.getInt("number_id");
+                    item.numberId = jsonObject.getString("number_id");
                     item.id = jsonObject.getInt("project_id");
 
                     projectItems.add(item);

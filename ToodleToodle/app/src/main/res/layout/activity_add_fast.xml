@@ -27,7 +27,7 @@
                 android:textColor="@color/header_title_txt"/>
 
             <ImageView
-                android:src="@drawable/ic_back_black_26"
+                android:src="@drawable/ic_arrow_left_black"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:layout_centerVertical="true"
@@ -53,157 +53,143 @@
             android:letterSpacing="-0.03"
             android:lineSpacingExtra="3dp"/>
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
+            android:layout_height="match_parent"
+            android:layout_marginTop="134dp">
 
-            <RelativeLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
 
                 <RelativeLayout
-                    android:layout_width="88dp"
-                    android:layout_height="88dp"
-                    android:background="@drawable/custom_basic_circle"
-                    android:layout_centerHorizontal="true">
+                    android:layout_width="match_parent"
+                    android:layout_height="146dp"
+                    android:layout_marginBottom="8dp">
 
                     <ImageView
-                        android:src="@drawable/ic_add_screen_task"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_centerInParent="true"/>
+                        android:src="@drawable/ic_add_task"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="82dp"
+                        android:text="@string/add_fast_task"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/header_content_txt"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="107dp"
+                        android:gravity="center"
+                        android:text="@string/add_fast_task_content"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/header_sub_content_txt"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:background="@color/transparent"
+                        android:onClick="InitTaskClicked"/>
 
                 </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="100dp"
-                    android:text="@string/add_fast_task"
-                    android:textSize="14dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/header_content_txt"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="126dp"
-                    android:gravity="center"
-                    android:text="@string/add_fast_task_content"
-                    android:textSize="10dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/header_sub_content_txt"/>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:background="@color/transparent"
-                    android:onClick="InitTaskClicked"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-
                 <RelativeLayout
-                    android:layout_width="88dp"
-                    android:layout_height="88dp"
-                    android:background="@drawable/custom_basic_circle"
-                    android:layout_centerHorizontal="true">
+                    android:layout_width="match_parent"
+                    android:layout_height="146dp"
+                    android:layout_marginBottom="8dp">
 
                     <ImageView
-                        android:src="@drawable/ic_add_screen_schedule"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_centerInParent="true"/>
+                        android:src="@drawable/ic_add_schedule"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="82dp"
+                        android:text="@string/add_fast_schedule"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/header_content_txt"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="107dp"
+                        android:gravity="center"
+                        android:text="@string/add_fast_schedule_content"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/header_sub_content_txt"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:background="@color/transparent"
+                        android:onClick="InitScheduleClicked"/>
 
                 </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="100dp"
-                    android:text="@string/add_fast_schedule"
-                    android:textSize="14dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/header_content_txt"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="126dp"
-                    android:gravity="center"
-                    android:text="@string/add_fast_schedule_content"
-                    android:textSize="10dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/header_sub_content_txt"/>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:background="@color/transparent"
-                    android:onClick="InitScheduleClicked"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-
                 <RelativeLayout
-                    android:layout_width="88dp"
-                    android:layout_height="88dp"
-                    android:background="@drawable/custom_basic_circle"
-                    android:layout_centerHorizontal="true">
+                    android:layout_width="match_parent"
+                    android:layout_height="146dp"
+                    android:layout_marginBottom="8dp">
 
                     <ImageView
-                        android:src="@drawable/ic_add_screen_postit"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_centerInParent="true"/>
+                        android:src="@drawable/ic_add_task"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="82dp"
+                        android:text="@string/add_fast_postit"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/header_content_txt"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="107dp"
+                        android:gravity="center"
+                        android:text="@string/add_fast_postit_content"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/header_sub_content_txt"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:background="@color/transparent"
+                        android:onClick="InitPostitClicked"/>
 
                 </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="100dp"
-                    android:text="@string/add_fast_postit"
-                    android:textSize="14dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/header_content_txt"/>
+            </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="126dp"
-                    android:gravity="center"
-                    android:text="@string/add_fast_postit_content"
-                    android:textSize="10dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/header_sub_content_txt"/>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:background="@color/transparent"
-                    android:onClick="InitPostitClicked"/>
-
-            </RelativeLayout>
-
-        </LinearLayout>
+        </RelativeLayout>
 
     </RelativeLayout>
 
@@ -252,11 +238,11 @@
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginTop="56dp"
-            android:background="@color/tab_back_default"
+            android:background="@color/tab_back_off"
             app:tabMode="fixed"
             app:tabGravity="fill"
             app:tabIndicatorHeight="36dp"
-            app:tabIndicatorColor="@color/tab_back_active"/>
+            app:tabIndicatorColor="@color/tab_back_on"/>
 
         <com.origincurly.toodletoodle.ui.NonSwipeViewPager
             android:id="@+id/fastAdd_ViewPager"

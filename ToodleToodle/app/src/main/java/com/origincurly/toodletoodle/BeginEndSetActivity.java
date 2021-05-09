@@ -121,14 +121,14 @@ public class BeginEndSetActivity extends BasicActivity {
     }
 
     private void setInputResult() {
-        if (nick_EditTxt.length() < 1) {
-            beginEndSetBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_default);
-            beginEndSetBtn_Img.setImageResource(R.drawable.ic_next_default_20);
-
-        } else {
-            beginEndSetBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_active);
-            beginEndSetBtn_Img.setImageResource(R.drawable.ic_next_active_20);
-        }
+//        if (nick_EditTxt.length() < 1) {
+//            beginEndSetBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_off);
+//            beginEndSetBtn_Img.setImageResource(R.drawable.ic_next_off);
+//
+//        } else {
+//            beginEndSetBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_on);
+//            beginEndSetBtn_Img.setImageResource(R.drawable.ic_next_on);
+//        }
     }
 
     private void setTimePicker() {
@@ -176,33 +176,33 @@ public class BeginEndSetActivity extends BasicActivity {
     }
 
     public void BeginEndSetClicked(View v) {
-        nick = nick_EditTxt.getText().toString();
-
-        if (!isNotNull(nick)) {
-            showUserMsg(R.string.msg_user_nick_null);
-            nick_EditTxt.requestFocus();
-            return;
-        }
-
-        if (!validLength(nick, NICK_LENGTH_MIN, NICK_LENGTH_MAX)) {
-            showUserMsg(R.string.msg_user_nick_length_wrong);
-            nick_EditTxt.requestFocus();
-            return;
-        }
-
-        if (!validNick(nick)) {
-            showUserMsg(R.string.msg_user_nick_regex_wrong);
-            nick_EditTxt.requestFocus();
-            return;
-        }
-
-        if (nick.contains(USER_NICK_DEFAULT)) {
-            showUserMsg(R.string.msg_user_nick_wrong);
-            nick_EditTxt.requestFocus();
-            return;
-        }
-
-        new NickSetTask().execute();
+//        nick = nick_EditTxt.getText().toString();
+//
+//        if (!isNotNull(nick)) {
+//            showUserMsg(R.string.msg_user_nick_null);
+//            nick_EditTxt.requestFocus();
+//            return;
+//        }
+//
+//        if (!validLength(nick, NICK_LENGTH_MIN, NICK_LENGTH_MAX)) {
+//            showUserMsg(R.string.msg_user_nick_length_wrong);
+//            nick_EditTxt.requestFocus();
+//            return;
+//        }
+//
+//        if (!validNick(nick)) {
+//            showUserMsg(R.string.msg_user_nick_regex_wrong);
+//            nick_EditTxt.requestFocus();
+//            return;
+//        }
+//
+//        if (nick.contains(USER_NICK_DEFAULT)) {
+//            showUserMsg(R.string.msg_user_nick_wrong);
+//            nick_EditTxt.requestFocus();
+//            return;
+//        }
+//
+//        new NickSetTask().execute();
 
     }
 
@@ -329,10 +329,10 @@ public class BeginEndSetActivity extends BasicActivity {
     }
 
 
-    @Override
-    public void clearFocusBundle() {
-        nick_EditTxt.clearFocus();
-    }
+//    @Override
+//    public void clearFocusBundle() {
+//        nick_EditTxt.clearFocus();
+//    }
 
     @Override
     public void backActivity() {

@@ -411,7 +411,7 @@ public class AddFastScheduleFragment extends BasicFragment {
         datePicker_Layout.startAnimation(animation);
         datePicker_Layout.setVisibility(View.VISIBLE);
         dateLine_View.setBackgroundColor(mContext.getColor(R.color.add_value_select_line));
-        datePickerFoldBtn_Img.setImageResource(R.drawable.ic_dropup_20);
+        datePickerFoldBtn_Img.setImageResource(R.drawable.ic_circle_up);
     }
 
     private void hideDatePicker() {
@@ -420,7 +420,7 @@ public class AddFastScheduleFragment extends BasicFragment {
         datePicker_Layout.startAnimation(animation);
         hideDatePickerHandler.sendEmptyMessageDelayed(0, DATE_PICKER_FOLD_ANIMATION_TIME);
         dateLine_View.setBackgroundColor(mContext.getColor(R.color.add_value_hint_line));
-        datePickerFoldBtn_Img.setImageResource(R.drawable.ic_dropdown_20);
+        datePickerFoldBtn_Img.setImageResource(R.drawable.ic_circle_down);
 
         setDate();
     }
@@ -512,7 +512,7 @@ public class AddFastScheduleFragment extends BasicFragment {
 
                     ProjectItem item = new ProjectItem();
 
-                    item.numberId = jsonObject.getInt("number_id");
+                    item.numberId = jsonObject.getString("number_id");
                     item.id = jsonObject.getInt("project_id");
 
                     projectItems.add(item);

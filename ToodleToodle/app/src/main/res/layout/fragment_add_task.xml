@@ -58,7 +58,7 @@
                     android:visibility="gone">
 
                     <ImageView
-                        android:src="@drawable/ic_all_delete"
+                        android:src="@drawable/ic_circle_cancel"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_centerInParent="true"/>
@@ -112,7 +112,7 @@
                                 android:layout_centerInParent="true">
 
                                 <ImageView
-                                    android:src="@drawable/ic_importance_high_black_16"
+                                    android:src="@drawable/ic_star_3"
                                     android:layout_width="44dp"
                                     android:layout_height="16dp"
                                     android:layout_gravity="center_horizontal"/>
@@ -144,7 +144,7 @@
                                 android:background="@drawable/custom_task_importance_select_back"/>
 
                             <ImageView
-                                android:src="@drawable/ic_importance_select"
+                                android:src="@drawable/ic_star_select"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentEnd="true"/>
@@ -182,7 +182,7 @@
                                 android:layout_centerInParent="true">
 
                                 <ImageView
-                                    android:src="@drawable/ic_importance_mid_black_16"
+                                    android:src="@drawable/ic_star_2"
                                     android:layout_width="44dp"
                                     android:layout_height="16dp"
                                     android:layout_gravity="center_horizontal"/>
@@ -214,7 +214,7 @@
                                 android:background="@drawable/custom_task_importance_select_back"/>
 
                             <ImageView
-                                android:src="@drawable/ic_importance_select"
+                                android:src="@drawable/ic_star_select"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentEnd="true"/>
@@ -252,7 +252,7 @@
                                 android:layout_centerInParent="true">
 
                                 <ImageView
-                                    android:src="@drawable/ic_importance_low_black_16"
+                                    android:src="@drawable/ic_star_1"
                                     android:layout_width="44dp"
                                     android:layout_height="16dp"
                                     android:layout_gravity="center_horizontal"/>
@@ -284,7 +284,7 @@
                                 android:background="@drawable/custom_task_importance_select_back"/>
 
                             <ImageView
-                                android:src="@drawable/ic_importance_select"
+                                android:src="@drawable/ic_star_select"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentEnd="true"/>
@@ -341,7 +341,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="116dp"
                         android:layout_centerVertical="true"
-                        android:text="@string/add_schedule_set_project_default"
+                        android:text="@string/add_schedule_set_project_off"
                         android:textSize="15dp"
                         android:textStyle="normal"
                         android:textColor="@color/add_value_txt"/>
@@ -462,7 +462,7 @@
                     </RelativeLayout>
 
                     <ImageView
-                        android:src="@drawable/ic_stepper_up"
+                        android:src="@drawable/ic_task_time_up"
                         android:layout_width="34dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
@@ -479,7 +479,7 @@
                         android:onClick="EndDatePlusClicked"/>
 
                     <ImageView
-                        android:src="@drawable/ic_stepper_down"
+                        android:src="@drawable/ic_task_time_down"
                         android:layout_width="34dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
@@ -580,7 +580,7 @@
                     android:textColor="@color/add_value_txt"/>
 
                 <ImageView
-                    android:src="@drawable/ic_add_section"
+                    android:src="@drawable/ic_circle_add"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
@@ -632,7 +632,7 @@
             android:layout_centerInParent="true">
 
             <ImageView
-                android:src="@drawable/ic_check_white_20"
+                android:src="@drawable/ic_check_white"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center_vertical"/>

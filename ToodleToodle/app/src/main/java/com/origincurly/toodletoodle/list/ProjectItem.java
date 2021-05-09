@@ -2,7 +2,7 @@ package com.origincurly.toodletoodle.list;
 
 public class ProjectItem {
 
-    public int numberId;
+    public String numberId;
     public int id;
 
     public int colorId;

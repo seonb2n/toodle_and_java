@@ -68,7 +68,7 @@
 
     <ImageView
         android:id="@+id/check_Img"
-        android:src="@drawable/ic_check_black_24"
+        android:src="@drawable/ic_check_on"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignParentEnd="true"

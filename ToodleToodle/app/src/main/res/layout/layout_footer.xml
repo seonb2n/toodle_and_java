@@ -24,7 +24,7 @@
 
             <ImageView
                 android:id="@+id/today_Img"
-                android:src="@drawable/ic_tab_today_default"
+                android:src="@drawable/ic_tab_today_off"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_centerHorizontal="true"
@@ -32,7 +32,7 @@
 
             <ImageView
                 android:id="@+id/today_indicator_Img"
-                android:src="@drawable/ic_tab_indicator_default"
+                android:src="@color/transparent"
                 android:layout_width="10dp"
                 android:layout_height="2dp"
                 android:layout_centerHorizontal="true"
@@ -53,7 +53,7 @@
 
             <ImageView
                 android:id="@+id/project_Img"
-                android:src="@drawable/ic_tab_project_default"
+                android:src="@drawable/ic_tab_project_off"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_centerHorizontal="true"
@@ -61,7 +61,7 @@
 
             <ImageView
                 android:id="@+id/project_indicator_Img"
-                android:src="@drawable/ic_tab_indicator_default"
+                android:src="@color/transparent"
                 android:layout_width="10dp"
                 android:layout_height="2dp"
                 android:layout_centerHorizontal="true"
@@ -82,7 +82,7 @@
 
             <ImageView
                 android:id="@+id/calendar_Img"
-                android:src="@drawable/ic_tab_calendar_default"
+                android:src="@drawable/ic_tab_calendar_off"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_centerHorizontal="true"
@@ -90,7 +90,7 @@
 
             <ImageView
                 android:id="@+id/calendar_indicator_Img"
-                android:src="@drawable/ic_tab_indicator_default"
+                android:src="@color/transparent"
                 android:layout_width="10dp"
                 android:layout_height="2dp"
                 android:layout_centerHorizontal="true"
@@ -111,7 +111,7 @@
 
             <ImageView
                 android:id="@+id/my_Img"
-                android:src="@drawable/ic_tab_my_default"
+                android:src="@drawable/ic_tab_my_off"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_centerHorizontal="true"
@@ -119,7 +119,7 @@
 
             <ImageView
                 android:id="@+id/my_indicator_Img"
-                android:src="@drawable/ic_tab_indicator_default"
+                android:src="@color/transparent"
                 android:layout_width="10dp"
                 android:layout_height="2dp"
                 android:layout_centerHorizontal="true"

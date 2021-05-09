@@ -11,7 +11,7 @@
 
         <ImageView
             android:id="@+id/back_Img"
-            android:src="@drawable/ic_back_black_26"
+            android:src="@drawable/ic_arrow_left_black"
             android:layout_width="26dp"
             android:layout_height="26dp"
             android:layout_centerVertical="true"
@@ -46,7 +46,7 @@
     </RelativeLayout>
 
     <ImageView
-        android:src="@drawable/group_2"
+        android:src="@drawable/back_t1"
         android:layout_width="238dp"
         android:layout_height="183dp"
         android:layout_alignParentEnd="true"
@@ -78,7 +78,7 @@
             android:textColor="@color/header_sub_title_txt"/>
 
         <ImageView
-            android:src="@drawable/group_2"
+            android:src="@drawable/back_t1"
             android:layout_width="238dp"
             android:layout_height="183dp"
             android:layout_alignParentEnd="true"
@@ -94,6 +94,7 @@
         android:visibility="visible">
 
         <ImageView
+            android:src="@color/colorAccent"
             android:layout_width="119dp"
             android:layout_height="51dp"
             android:layout_marginStart="20dp"
@@ -137,7 +138,7 @@
                 android:background="@color/postit_add_ready_line"/>
 
             <ImageView
-                android:src="@drawable/ic_add_section"
+                android:src="@drawable/ic_circle_add"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
@@ -185,7 +186,7 @@
                 android:layout_height="42dp">
 
                 <ImageView
-                    android:src="@drawable/ic_more_18"
+                    android:src="@drawable/ic_postit_more"
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:layout_centerVertical="true"

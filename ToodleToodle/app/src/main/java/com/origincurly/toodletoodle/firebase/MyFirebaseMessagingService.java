@@ -82,7 +82,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService impleme
     private int getNotificationIcon() {
         boolean useWhiteIcon = (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP);
         //TODO 아이콘 정하기
-        return useWhiteIcon ? R.drawable.ic_launcher_background : R.drawable.ic_launcher_background; // left white, right colored
+        return useWhiteIcon ? R.drawable.ic_star_3 : R.drawable.ic_star_3; // left white, right colored
     }
 
     public int getDevicePreferences(String key, int fault) {

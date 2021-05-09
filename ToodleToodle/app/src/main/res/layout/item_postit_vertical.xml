@@ -100,7 +100,7 @@
             android:layout_marginEnd="10dp">
             
             <ImageView
-                android:src="@drawable/ic_reture_blue"
+                android:src="@drawable/ic_postit_return"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_centerVertical="true"

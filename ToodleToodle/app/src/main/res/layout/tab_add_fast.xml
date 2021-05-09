@@ -11,6 +11,6 @@
         android:layout_centerInParent="true"
         android:textSize="12dp"
         android:textStyle="bold"
-        android:textColor="@color/tab_txt_default"/>
+        android:textColor="@color/tab_txt_off"/>
 
 </RelativeLayout>
