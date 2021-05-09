@@ -512,7 +512,7 @@ public class AddFastScheduleFragment extends BasicFragment {
 
                     ProjectItem item = new ProjectItem();
 
-                    item.numberId = jsonObject.getString("number_id");
+                    item.numberId = jsonObject.getInt("number_id");
                     item.id = jsonObject.getInt("project_id");
 
                     projectItems.add(item);
