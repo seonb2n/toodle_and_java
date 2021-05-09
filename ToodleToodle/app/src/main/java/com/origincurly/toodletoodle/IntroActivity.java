@@ -294,7 +294,7 @@ public class IntroActivity extends BasicActivity {
         } else {
             startDelayActivity(NickSetActivity.class);
         }
-    }
+    } 
 
     private Intent introActivityIntent;
 
@@ -317,6 +317,7 @@ public class IntroActivity extends BasicActivity {
         showServerError(errorCodeEnum);
         killApp();
     }
+
 
     //endregion
 

@@ -37,9 +37,9 @@ public class NetworkManager {
         File cacheDir = new File(context.getCacheDir(), "network");
         if (!cacheDir.exists()) {
             boolean ignore = cacheDir.mkdir();
-        }
+    }
 
-        Cache cache = new Cache(cacheDir, 10 * 1024 * 1024);
+    Cache cache = new Cache(cacheDir, 10 * 1024 * 1024);
 
         builder.connectTimeout(10, TimeUnit.SECONDS);
         builder.readTimeout(10, TimeUnit.SECONDS);
