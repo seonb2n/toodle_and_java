@@ -34,7 +34,7 @@
                 android:layout_centerInParent="true">
 
                 <ImageView
-                    android:src="@drawable/ic_project_add_plus_16"
+                    android:src="@drawable/ic_project_white"
                     android:layout_width="16dp"
                     android:layout_height="15dp"
                     android:layout_gravity="center_vertical"/>
@@ -93,7 +93,7 @@
                 android:textColor="@color/project_main_task_number_text_color"/>
 
             <ImageView
-                android:src="@drawable/ic_left_black_14"
+                android:src="@drawable/ic_bracket_right"
                 android:layout_width="12dp"
                 android:layout_height="12dp"
                 android:layout_marginTop="3dp"/>
@@ -141,7 +141,7 @@
             android:layout_height="256dp"
             android:layout_marginTop="183dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/group_2"/>
+            android:src="@drawable/back_t1"/>
 
     </RelativeLayout>
 
@@ -204,7 +204,7 @@
                     android:text="@string/project_tab_count_txt"
                     android:textSize="12dp"
                     android:textStyle="bold"
-                    android:textColor="@color/project_tab_select_txt_active"/>
+                    android:textColor="@color/project_tab_select_txt_on"/>
 
             </LinearLayout>
 

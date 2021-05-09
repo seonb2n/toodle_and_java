@@ -128,12 +128,12 @@ public class LoginActivity extends BasicActivity {
 
     private void setInputResult() {
         if (mail_EditTxt.length() < 1 && pw_EditTxt.length() < 1) {
-            loginBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_default);
-            loginBtn_Img.setImageResource(R.drawable.ic_check_default_20);
+            loginBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_off);
+            loginBtn_Img.setImageResource(R.drawable.ic_check_off);
 
         } else {
-            loginBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_active);
-            loginBtn_Img.setImageResource(R.drawable.ic_check_active_20);
+            loginBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_on);
+            loginBtn_Img.setImageResource(R.drawable.ic_check_on);
         }
     }
 
@@ -143,13 +143,13 @@ public class LoginActivity extends BasicActivity {
         if (isPwShow) {
             isPwShow = false;
             pw_EditTxt.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-            pwShow_Img.setImageResource(R.drawable.ic_task_look_on_20);
+            pwShow_Img.setImageResource(R.drawable.ic_hide_off);
             clearFocusBundle();
 
         } else {
             isPwShow = true;
             pw_EditTxt.setTransformationMethod(PasswordTransformationMethod.getInstance());
-            pwShow_Img.setImageResource(R.drawable.ic_task_look_off_20);
+            pwShow_Img.setImageResource(R.drawable.ic_hide_on);
             clearFocusBundle();
 
         }

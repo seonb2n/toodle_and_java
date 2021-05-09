@@ -37,7 +37,7 @@
                             android:layout_height="16dp"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="26dp"
-                            android:src="@drawable/ic_check_16" />
+                            android:src="@drawable/ic_time_on" />
 
                         <TextView
                             android:id="@+id/dayLater_Txt"
@@ -175,7 +175,7 @@
 
                     <ImageView
                         android:id="@+id/datePickerFoldBtn_Img"
-                        android:src="@drawable/ic_dropdown_20"
+                        android:src="@drawable/ic_circle_down"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"
@@ -242,7 +242,7 @@
                     android:visibility="gone">
 
                     <ImageView
-                        android:src="@drawable/ic_all_delete"
+                        android:src="@drawable/ic_circle_cancel"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_centerInParent="true"/>
@@ -288,7 +288,7 @@
 
             <ImageView
                 android:id="@+id/timePickerBtn_Img"
-                android:src="@drawable/ic_time_setting"
+                android:src="@drawable/ic_arrow_right"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
@@ -335,7 +335,7 @@
                     android:textColor="@color/add_value_txt"/>
 
                 <ImageView
-                    android:src="@drawable/ic_add_section"
+                    android:src="@drawable/ic_circle_add"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
@@ -389,7 +389,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="116dp"
                     android:layout_centerVertical="true"
-                    android:text="@string/add_schedule_set_project_default"
+                    android:text="@string/add_schedule_set_project_off"
                     android:textSize="15dp"
                     android:textStyle="normal"
                     android:textColor="@color/add_value_txt"/>
@@ -443,7 +443,7 @@
                     android:textColor="@color/add_value_txt"/>
 
                 <ImageView
-                    android:src="@drawable/ic_add_section"
+                    android:src="@drawable/ic_circle_add"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
@@ -496,7 +496,7 @@
                     android:background="@drawable/custom_edit_text_basic_back"/>
 
                 <ImageView
-                    android:src="@drawable/ic_select_remove"
+                    android:src="@drawable/ic_circle_cancel"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
@@ -533,7 +533,7 @@
             android:layout_centerInParent="true">
 
             <ImageView
-                android:src="@drawable/ic_check_white_20"
+                android:src="@drawable/ic_check_white"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center_vertical"/>

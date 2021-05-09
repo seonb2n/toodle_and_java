@@ -164,7 +164,7 @@
     <string name="db_check_content_6">투들을 만들고 있습니다. 내용</string>
     <string name="db_check_content_7">투들을 만들고 있습니다. 내용</string>
 
-    <string name="db_check_percent_default">0%</string>
+    <string name="db_check_percent_off">0%</string>
 
     <!--db_check message-->
     <string name="msg_db_check_user_wrong">유저 정보가 없어 로그인이 필요합니다.</string>
@@ -181,14 +181,14 @@
 
     <!--add_fast-->
     <string name="add_fast_title">빠른 추가</string>
-    <string name="add_fast_sub_title">추가할\n항목을 골라보세요.</string>
+    <string name="add_fast_sub_title">추가할 항목을 고르세요.</string>
 
     <string name="add_fast_task">태스크</string>
     <string name="add_fast_schedule">스케줄</string>
     <string name="add_fast_postit">포스트잇</string>
-    <string name="add_fast_task_content">기간단위로 할 일을\n추가합니다.</string>
-    <string name="add_fast_schedule_content">특정시간에\n일정을 추가합니다</string>
-    <string name="add_fast_postit_content">기억하고 싶은\n특정 일을 추가합니다.</string>
+    <string name="add_fast_task_content">기간단위로 할 일을 추가합니다.</string>
+    <string name="add_fast_schedule_content">특정시간에 일정을 추가합니다</string>
+    <string name="add_fast_postit_content">기억하고 싶은 특정 일을 추가합니다.</string>
 
     <string name="add_key_title">이름</string>
     <string name="add_value_title_hint">이름을 입력해주세요.</string>
@@ -232,7 +232,7 @@
     <!--Schedule-->
 
     <string name="add_schedule_set_project">프로젝트에 소속하기</string>
-    <string name="add_schedule_set_project_default">소속 프로젝트 없음</string>
+    <string name="add_schedule_set_project_off">소속 프로젝트 없음</string>
     <string name="add_schedule_set_content">메모 추가하기</string>
     <string name="add_schedule_add">스케줄 추가하기</string>
 

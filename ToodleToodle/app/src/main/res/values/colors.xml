@@ -14,8 +14,8 @@
     <color name="dark_circle_back">#e6e8ed</color>
 
 
-    <color name="submit_btn_stroke_default">#ededf2</color>
-    <color name="submit_btn_stroke_active">#222222</color>
+    <color name="submit_btn_stroke_off">#ededf2</color>
+    <color name="submit_btn_stroke_on">#222222</color>
 
     <!--footer-->
     <color name="footer_back">#ffffff</color>
@@ -122,10 +122,10 @@
     <color name="header_positive_btn_txt">#222222</color>
     <color name="header_negative_btn_txt">#222222</color>
 
-    <color name="tab_back_active">#222222</color>
-    <color name="tab_txt_active">#ffffff</color>
-    <color name="tab_back_default">#f3f5f8</color>
-    <color name="tab_txt_default">#b6bbc7</color>
+    <color name="tab_back_on">#222222</color>
+    <color name="tab_txt_on">#ffffff</color>
+    <color name="tab_back_off">#f3f5f8</color>
+    <color name="tab_txt_off">#b6bbc7</color>
 
     <color name="bottom_submit_btn_back">#222222</color>
     <color name="bottom_submit_btn_txt">#ffffff</color>
@@ -181,8 +181,8 @@
     <color name="project_bottom_tab_select">#222222</color>
 
     <color name="project_main_text_color">#222222</color>
-    <color name="project_tab_select_txt_active">#222222</color>
-    <color name="project_tab_select_txt_default">#b6bbc7</color>
+    <color name="project_tab_select_txt_on">#222222</color>
+    <color name="project_tab_select_txt_off">#b6bbc7</color>
 
     <!--endregion-->
 
@@ -208,7 +208,7 @@
     <color name="project_done_task_priority_txt">#222222</color>
     <color name="project_done_task_priority_line">#eff4fa</color>
 
-    <color name="project_done_task_card_default_txt">#222222</color>
+    <color name="project_done_task_card_off_txt">#222222</color>
     <color name="project_done_task_card_num_of_actions_txt">#777777</color>
     <color name="project_done_task_card_vertical_bar">#000000</color>
     <color name="project_done_task_card_show_less_button_txt">#31353e</color>

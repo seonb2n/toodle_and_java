@@ -11,7 +11,7 @@
         android:background="@color/header_bright_back">
 
         <ImageView
-            android:src="@drawable/ic_back_black_26"
+            android:src="@drawable/ic_arrow_left_black"
             android:layout_width="26dp"
             android:layout_height="26dp"
             android:layout_centerVertical="true"
@@ -26,6 +26,7 @@
     </RelativeLayout>
 
     <ImageView
+        android:src="@color/colorAccent"
         android:layout_width="138dp"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
@@ -71,7 +72,7 @@
 
         <ImageView
             android:id="@+id/pwShow_Img"
-            android:src="@drawable/ic_task_look_off_20"
+            android:src="@drawable/ic_hide_on"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignParentEnd="true"
@@ -112,7 +113,7 @@
 
         <ImageView
             android:id="@+id/pwReShow_Img"
-            android:src="@drawable/ic_task_look_off_20"
+            android:src="@drawable/ic_hide_on"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignParentEnd="true"
@@ -165,7 +166,7 @@
             android:layout_marginEnd="20dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/custom_submit_btn_default">
+            android:background="@drawable/custom_submit_btn_off">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -175,7 +176,7 @@
 
                 <ImageView
                     android:id="@+id/joinEmailBtn_Img"
-                    android:src="@drawable/ic_check_default_20"
+                    android:src="@drawable/ic_check_off"
                     android:layout_width="21dp"
                     android:layout_height="21dp"
                     android:layout_gravity="center_vertical"/>

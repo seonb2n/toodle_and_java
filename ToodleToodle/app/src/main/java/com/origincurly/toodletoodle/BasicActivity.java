@@ -193,31 +193,31 @@ public class BasicActivity extends AppCompatActivity implements GlobalValue {
     }
 
     public void setFooterLayout() {
-        today_Img.setImageResource(R.drawable.ic_tab_today_default);
-        today_indicator_Img.setImageResource(R.drawable.ic_tab_indicator_default);
-        project_Img.setImageResource(R.drawable.ic_tab_project_default);
-        project_indicator_Img.setImageResource(R.drawable.ic_tab_indicator_default);
-        calendar_Img.setImageResource(R.drawable.ic_tab_calendar_default);
-        calendar_indicator_Img.setImageResource(R.drawable.ic_tab_indicator_default);
-        my_Img.setImageResource(R.drawable.ic_tab_my_default);
-        my_indicator_Img.setImageResource(R.drawable.ic_tab_indicator_default);
+        today_Img.setImageResource(R.drawable.ic_tab_today_off);
+        today_indicator_Img.setImageResource(R.drawable.ic_tab_dot_on);
+        project_Img.setImageResource(R.drawable.ic_tab_project_off);
+        project_indicator_Img.setImageResource(R.drawable.ic_tab_dot_on);
+        calendar_Img.setImageResource(R.drawable.ic_tab_calendar_off);
+        calendar_indicator_Img.setImageResource(R.drawable.ic_tab_dot_on);
+        my_Img.setImageResource(R.drawable.ic_tab_my_off);
+        my_indicator_Img.setImageResource(R.drawable.ic_tab_dot_on);
 
         switch (pageInt) {
             case TODAY_PAGE:
-                today_Img.setImageResource(R.drawable.ic_tab_today_active);
-                today_indicator_Img.setImageResource(R.drawable.ic_tab_indicator_active);
+                today_Img.setImageResource(R.drawable.ic_tab_today_on);
+                today_indicator_Img.setImageResource(R.drawable.ic_tab_dot_on);
                 break;
             case PROJECT_PAGE:
-                project_Img.setImageResource(R.drawable.ic_tab_project_active);
-                project_indicator_Img.setImageResource(R.drawable.ic_tab_indicator_active);
+                project_Img.setImageResource(R.drawable.ic_tab_project_on);
+                project_indicator_Img.setImageResource(R.drawable.ic_tab_dot_on);
                 break;
             case CALENDAR_PAGE:
-                calendar_Img.setImageResource(R.drawable.ic_tab_calendar_active);
-                calendar_indicator_Img.setImageResource(R.drawable.ic_tab_indicator_active);
+                calendar_Img.setImageResource(R.drawable.ic_tab_calendar_on);
+                calendar_indicator_Img.setImageResource(R.drawable.ic_tab_dot_on);
                 break;
             case MY_PAGE:
-                my_Img.setImageResource(R.drawable.ic_tab_my_active);
-                my_Img.setImageResource(R.drawable.ic_tab_indicator_active);
+                my_Img.setImageResource(R.drawable.ic_tab_my_on);
+                my_Img.setImageResource(R.drawable.ic_tab_dot_on);
                 break;
         }
     }
@@ -533,9 +533,9 @@ public class BasicActivity extends AppCompatActivity implements GlobalValue {
         view.postUrl(url, postData.getBytes());
     }
 
-    public String getGetData(String url, String key, String _default) {
+    public String getGetData(String url, String key, String_default) {
         if (!url.contains("?")) {
-            return _default;
+            return_default;
         }
 
         String needle1 = "?"+key+"=";
@@ -562,7 +562,7 @@ public class BasicActivity extends AppCompatActivity implements GlobalValue {
             }
 
         } else {
-            return _default;
+            return_default;
         }
     }
 

@@ -97,12 +97,12 @@ public class NickSetActivity extends BasicActivity {
 
     private void setInputResult() {
         if (nick_EditTxt.length() < 1) {
-            joinEmailBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_default);
-            joinEmailBtn_Img.setImageResource(R.drawable.ic_next_default_20);
+            joinEmailBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_off);
+            joinEmailBtn_Img.setImageResource(R.drawable.ic_next_off);
 
         } else {
-            joinEmailBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_active);
-            joinEmailBtn_Img.setImageResource(R.drawable.ic_next_active_20);
+            joinEmailBtn_Layout.setBackgroundResource(R.drawable.custom_submit_btn_on);
+            joinEmailBtn_Img.setImageResource(R.drawable.ic_next_on);
         }
     }
 

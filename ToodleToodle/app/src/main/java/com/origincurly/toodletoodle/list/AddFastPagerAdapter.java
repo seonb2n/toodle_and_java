@@ -44,13 +44,13 @@ public class AddFastPagerAdapter extends FragmentPagerAdapter {
         TabLayout.Tab tab = tabLayout.getTabAt(position);
         View selected = tab.getCustomView();
         TextView iv_text = selected.findViewById(R.id.tab_Txt);
-        iv_text.setTextColor(ContextCompat.getColor(context, R.color.tab_txt_active));
+        iv_text.setTextColor(ContextCompat.getColor(context, R.color.tab_txt_on));
     }
 
     public void setUnSelectView(TabLayout tabLayout, int position) {
         TabLayout.Tab tab = tabLayout.getTabAt(position);
         View selected = tab.getCustomView();
         TextView iv_text = selected.findViewById(R.id.tab_Txt);
-        iv_text.setTextColor(ContextCompat.getColor(context, R.color.tab_txt_default));
+        iv_text.setTextColor(ContextCompat.getColor(context, R.color.tab_txt_off));
     }
 }
