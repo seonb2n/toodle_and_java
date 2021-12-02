@@ -177,7 +177,14 @@ public class LoginActivity extends BasicActivity {
             return;
         }
 
-        new LoginMailTask().execute();
+//        new LoginMailTask().execute();
+        mockLogin();
+    }
+    private void mockLogin() {
+        checkLoginResult("1"
+                , "1"
+                , "닉네임"
+                , 5);
     }
     public void Login2Clicked(View v) {
         mail = "a@a.com";

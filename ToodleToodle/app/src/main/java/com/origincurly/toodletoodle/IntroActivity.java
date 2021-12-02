@@ -60,7 +60,7 @@ public class IntroActivity extends BasicActivity {
             Log.d(TAG, "key_hash:"+keyHash);
         }
 
-        new VersionCheckTask().execute();
+        new VersionCheckTask().execute(); // 버전체크 (반드시 업데이트 해야하는 앱 버전, 업데이트가 존재하는 앱 버전)
     }
 
     //region Version
@@ -194,7 +194,7 @@ public class IntroActivity extends BasicActivity {
 
     //endregion
 
-    private void getToken() {
+    private void getToken() { // FCM 토큰   무한루프 막기 + FCM 업데이트
         FirebaseInstanceId.getInstance().getInstanceId()
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
                     @Override
@@ -220,10 +220,11 @@ public class IntroActivity extends BasicActivity {
     }
 
     private void checkLogin() {
-        if (loginState == LOGIN_EXIST) {
-            new UserCheckTask().execute();
+        if (loginState == LOGIN_EXIST) { // 로그인 상태일 때
+            new UserCheckTask().execute(); // 로그인 정보를 조회해서 확인한다.
+            //TODO help view 여부를 확인하여 Welcome Page를 이동하게 한다.
 
-        } else {
+        } else { // 로그인 상태가 아닐 때
             startDelayActivity(LoginActivity.class);
             //TODO help view 여부를 확인하여 Welcome Page를 이동하게 한다.
         }
@@ -285,10 +286,10 @@ public class IntroActivity extends BasicActivity {
         setDataLogin(uuid, partitionId, nick, state);
 
         if (isNickNotNull(userNick)) {
-            if (userDbState < getDevicePreferences("available_db_state", USER_DB_STATE_DEFAULT)) {
-                startDelayActivity(DbCheckActivity.class);
+            if (userDbState < getDevicePreferences("available_db_state", USER_DB_STATE_DEFAULT)) { // user 1, postit-category 2, postit 3, card 4, // available 4
+                startDelayActivity(DbCheckActivity.class); // DB init이 필요하다 (positit, postit_category)
             } else {
-                startDelayActivity(TodayWorkActivity.class);
+                startDelayActivity(TodayWorkActivity.class); // 홈으로 보내는것
             }
 
         } else {
@@ -297,8 +298,16 @@ public class IntroActivity extends BasicActivity {
     } 
 
     private Intent introActivityIntent;
-
     private void startDelayActivity(Class c) {
+        /**
+         * 모두 딜레이로 부르는 이유
+         *
+         * api call - 0.5초 (4, 2) - 1초
+         * 스플래시 화면 1초만에 번쩍 -> 조금 별로
+         * 2
+         *
+         *
+         */
         introActivityIntent = new Intent(mContext, c);
         delayActivityHandler.sendEmptyMessageDelayed(0, INTRO_DELAY_TIME);
     }

@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services' // FCM 에 필요한 것 (gitignore 시킴, 해시 키파일과 유사)
 
 android {
     compileSdkVersion 29
@@ -26,16 +26,17 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: '1.30.0'
+    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: '1.30.0' // 카카오 로그인을 위한 것
 
-    implementation 'com.squareup.okhttp3:okhttp:3.12.1' // web http
-    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1' // Session
-    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4' // time
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1' // web http - API 통신용 -> retrofit 으로 바꿔야 함
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1' // Session - 현재는 사용 안할 예정 
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4' // time - java8 이하에서 그레고리력 문제가 고질적으로 있는데, 이를 해결해주는 library (1달을 뺐는데 100년 과거 가고 그럼)
 
-    implementation 'com.google.firebase:firebase-analytics:17.5.0'
-    implementation 'com.google.firebase:firebase-core:17.5.0'
-    implementation 'com.google.firebase:firebase-messaging:20.2.4'
-    implementation 'com.android.support:support-v4:29.0.0'
+    implementation 'com.google.firebase:firebase-analytics:17.5.0' // push 용 FCM 라이브러리
+    implementation 'com.google.firebase:firebase-core:17.5.0' // FCM
+    implementation 'com.google.firebase:firebase-messaging:20.2.4' // FCM
+
+    implementation 'com.android.support:support-v4:29.0.0' // android component addon
     implementation 'com.android.support:design:29.0.0'
     implementation 'com.android.support:recyclerview-v7:29.0.0'
     implementation 'com.google.android.material:material:1.2.0' // for round edge
