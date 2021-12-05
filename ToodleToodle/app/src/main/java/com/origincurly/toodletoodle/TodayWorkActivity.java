@@ -68,6 +68,10 @@ public class TodayWorkActivity extends BasicActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         postit_RecyclerView.setLayoutManager(layoutManager);
+
+        //recycler view 로 today work 카드 뷰 형식으로 추가해줘야 함.
+
+
     }
 
     private View.OnClickListener onClickPostitItem = new View.OnClickListener() {
