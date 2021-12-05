@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/today_work_cardView_cardView"
+    android:layout_width="240dp"
+    android:layout_height="32dp"
+    android:layout_margin="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="202dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_today_cardview_cardview_back">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_action" />
+
+            <TextView
+                android:id="@+id/today_work_cardView_cardView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
+                android:letterSpacing="-0.04"
+                android:lineSpacingExtra="1sp"
+                android:text="로그인 버튼 시안 제작"
+                android:textColor="@color/project_color_null"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/custom_today_cardview_cardview_back">
+
+            <ImageView
+                android:id="@+id/today_work_cardView_cardView_done_imageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_black_20"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/today_work_cardView_cardView_done_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

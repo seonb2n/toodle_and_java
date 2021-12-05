@@ -244,6 +244,12 @@
     <color name="today_bottom_button_stroke_off">#b6bbc7</color>
     <color name="today_timestamp_imageView">#125d5ce6</color>
     <color name="today_nowTime_textView_back">#335d5ce6</color>
+    <color name="today_cardView_card_importance_back1">#5d5ce6</color>
+    <color name="today_cardView_card_importance_back2">#43e4c0</color>
+    <color name="today_cardView_card_edit_button_back1">#1A5d5ce6</color>
+    <color name="today_cardView_card_work_title">#6866e9</color>
+    <color name="today_cardView_back">#125d5ce6</color>
+
     <!--endregion-->
 
 
