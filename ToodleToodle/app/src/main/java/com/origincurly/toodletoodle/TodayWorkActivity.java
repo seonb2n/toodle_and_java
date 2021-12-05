@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.origincurly.toodletoodle.list.PostitCategoryItem;
 import com.origincurly.toodletoodle.list.PostitHorizontalAdapter;
 import com.origincurly.toodletoodle.list.PostitItem;
+import com.origincurly.toodletoodle.list.TodayWorkAdapter;
 import com.origincurly.toodletoodle.util.ErrorCodeEnum;
 import com.origincurly.toodletoodle.util.NetworkManager;
 
@@ -41,11 +42,16 @@ public class TodayWorkActivity extends BasicActivity {
     private RecyclerView postit_RecyclerView;
     private RelativeLayout postitNull_Layout;
 
+    private RecyclerView todo_RecyclerView;
+
     //endregion
 
     //region Variable
 
     private PostitHorizontalAdapter postitHorizontalAdapter;
+    private TodayWorkAdapter todayWorkAdapter;
+
+
 
     //endregion
 
@@ -65,12 +71,13 @@ public class TodayWorkActivity extends BasicActivity {
 
         postit_RecyclerView = findViewById(R.id.postit_RecyclerView);
         postitNull_Layout = findViewById(R.id.postitNull_Layout);
-
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         postit_RecyclerView.setLayoutManager(layoutManager);
 
         //recycler view 로 today work 카드 뷰 형식으로 추가해줘야 함.
-
+        todo_RecyclerView = findViewById(R.id.today_work_RecyclerView);
+        LinearLayoutManager layoutManager1 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        todo_RecyclerView.setLayoutManager(layoutManager1);
 
     }
 
@@ -86,6 +93,8 @@ public class TodayWorkActivity extends BasicActivity {
         super.onResume();
 
         new PostitCategoryTask().execute();
+
+        todo_RecyclerView.setAdapter(todayWorkAdapter);
     }
 
     //region Button

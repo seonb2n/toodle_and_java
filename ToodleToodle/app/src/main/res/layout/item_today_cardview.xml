@@ -51,7 +51,7 @@
                 android:letterSpacing="0.04"
                 android:lineSpacingExtra="2sp"
                 android:text="수정"
-                android:textColor="@color/project_color_null"
+                android:textColor="@color/today_basic_black"
                 android:textSize="12sp" />
 
             <Button
@@ -83,7 +83,7 @@
             android:letterSpacing="-0.03"
             android:lineSpacingExtra="6sp"
             android:text="포트폴리오 웹사이트 제작"
-            android:textColor="@color/project_color_null"
+            android:textColor="@color/today_basic_black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -108,12 +108,12 @@
                 android:layout_width="213dp"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:background="none"
+                android:background="@color/transparent"
                 android:hint="추가할 액션 입력하기"
                 android:letterSpacing="-0.04"
                 android:lineSpacingExtra="1sp"
-                android:textColor="@color/project_color_null"
-                android:textColorHint="@color/project_color_null"
+                android:textColor="@color/today_basic_black"
+                android:textColorHint="@color/today_basic_black"
                 android:textSize="13sp"
                 android:textStyle="normal" />
 
