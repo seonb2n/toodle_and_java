@@ -16,15 +16,19 @@ import com.origincurly.toodletoodle.list.PostitCategoryItem;
 import com.origincurly.toodletoodle.list.PostitHorizontalAdapter;
 import com.origincurly.toodletoodle.list.PostitItem;
 import com.origincurly.toodletoodle.list.TodayWorkAdapter;
+import com.origincurly.toodletoodle.list.TodayWorkCardViewItem;
+import com.origincurly.toodletoodle.list.TodayWorkToDoItem;
 import com.origincurly.toodletoodle.util.ErrorCodeEnum;
 import com.origincurly.toodletoodle.util.NetworkManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.threeten.bp.LocalDateTime;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -51,15 +55,53 @@ public class TodayWorkActivity extends BasicActivity {
     private PostitHorizontalAdapter postitHorizontalAdapter;
     private TodayWorkAdapter todayWorkAdapter;
 
-
-
     //endregion
+
+    //cardView 용 mock data
+    private List<TodayWorkCardViewItem> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState ) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_today_work);
         setActivity(this, this);
+
+        //mock data sample region
+
+        items = new ArrayList<>();
+        List<TodayWorkToDoItem> toDoItems = new ArrayList<>();
+        TodayWorkToDoItem toDoItem1 = new TodayWorkToDoItem();
+        toDoItem1.id = 1;
+        toDoItem1.content = "로그인 버튼 시안 제작";
+        TodayWorkToDoItem toDoItem2 = new TodayWorkToDoItem();
+        toDoItem2.id = 2;
+        toDoItem2.content = "모바일 페이지 제작";
+        toDoItems.add(toDoItem1);
+        toDoItems.add(toDoItem2);
+
+        TodayWorkCardViewItem todayWorkCardViewItem1 = new TodayWorkCardViewItem();
+        todayWorkCardViewItem1.id = 1;
+        todayWorkCardViewItem1.importance = 3;
+        todayWorkCardViewItem1.startAt = LocalDateTime.now();
+        todayWorkCardViewItem1.endAt = LocalDateTime.now().plusHours(2L);
+        todayWorkCardViewItem1.cardViewTitle = "포트폴리오";
+        todayWorkCardViewItem1.projectTitle = "포트폴리오 웹사이트 제작";
+
+        todayWorkCardViewItem1.toDoItems = toDoItems;
+
+        TodayWorkCardViewItem todayWorkCardViewItem2 = new TodayWorkCardViewItem();
+        todayWorkCardViewItem2.importance = 1;
+        todayWorkCardViewItem2.id = 2;
+        todayWorkCardViewItem2.startAt = LocalDateTime.now();
+        todayWorkCardViewItem2.endAt = LocalDateTime.now().plusHours(2L);
+        todayWorkCardViewItem2.cardViewTitle = "포트폴리오2";
+        todayWorkCardViewItem2.projectTitle = "포트폴리오 웹사이트 제작";
+        todayWorkCardViewItem2.toDoItems = toDoItems;
+
+        items.add(todayWorkCardViewItem1);
+        items.add(todayWorkCardViewItem2);
+
+        //end region
 
         init();
     }
@@ -76,9 +118,10 @@ public class TodayWorkActivity extends BasicActivity {
 
         //recycler view 로 today work 카드 뷰 형식으로 추가해줘야 함.
         todo_RecyclerView = findViewById(R.id.today_work_RecyclerView);
-        LinearLayoutManager layoutManager1 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager layoutManager1 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         todo_RecyclerView.setLayoutManager(layoutManager1);
-
+        todayWorkAdapter = new TodayWorkAdapter(this, items);
+        todo_RecyclerView.setAdapter(todayWorkAdapter);
     }
 
     private View.OnClickListener onClickPostitItem = new View.OnClickListener() {
@@ -93,8 +136,6 @@ public class TodayWorkActivity extends BasicActivity {
         super.onResume();
 
         new PostitCategoryTask().execute();
-
-        todo_RecyclerView.setAdapter(todayWorkAdapter);
     }
 
     //region Button

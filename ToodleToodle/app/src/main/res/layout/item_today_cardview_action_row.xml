@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/today_work_cardView_cardView"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView_todo_scrollView_LinearLayout_Row"
     android:layout_width="240dp"
     android:layout_height="32dp"
-    android:layout_margin="0dp">
+    android:layout_marginBottom="6dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 android:src="@drawable/ic_action" />
 
             <TextView
-                android:id="@+id/today_work_cardView_cardView_title"
+                android:id="@+id/cardView_todo_scrollView_LinearLayout_Row_Content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -59,4 +59,4 @@
 
     </RelativeLayout>
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>
