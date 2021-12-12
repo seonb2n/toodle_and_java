@@ -1,62 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardView_todo_scrollView_LinearLayout_Row"
-    android:layout_width="240dp"
-    android:layout_height="32dp"
-    android:layout_marginBottom="6dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/cardView_Row_Content_RelativeLayout"
+        android:layout_width="202dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/custom_today_cardview_cardview_back">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_action" />
+
+
 
         <RelativeLayout
-            android:layout_width="202dp"
+            android:id="@+id/today_work_cardView_Row_done_RelativeLayout"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@drawable/custom_today_cardview_cardview_back">
-
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="8dp"
-                android:src="@drawable/ic_action" />
-
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_marginStart="30dp">
             <TextView
-                android:id="@+id/cardView_todo_scrollView_LinearLayout_Row_Content"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="30dp"
-                android:letterSpacing="-0.04"
-                android:lineSpacingExtra="1sp"
-                android:text="로그인 버튼 시안 제작"
-                android:textColor="@color/project_color_null"
-                android:textSize="13sp"
-                android:textStyle="normal" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="32dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/custom_today_cardview_cardview_back">
+                android:layout_height="match_parent"
+                android:text="액션을 완료한 상태입니다."
+                android:textColor="@color/today_cardView_toDo_text_done"
+                android:gravity="center_vertical"
+                />
 
             <ImageView
-                android:id="@+id/today_work_cardView_cardView_done_imageView"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_centerHorizontal="true"
+                android:background="@color/project_color_6"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_check_black_20"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/today_work_cardView_cardView_done_button"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/transparent" />
+                android:layout_height="1dp"/>
         </RelativeLayout>
 
+        <TextView
+            android:id="@+id/cardView_todo_scrollView_LinearLayout_Row_Content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:gravity="center_vertical"
+            android:letterSpacing="-0.04"
+            android:lineSpacingExtra="1sp"
+            android:text=""
+            android:textColor="@color/project_color_null"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@id/cardView_Row_Content_RelativeLayout"
+        android:background="@drawable/custom_today_cardview_cardview_back">
+
+        <ImageView
+            android:id="@+id/today_work_cardView_cardView_done_imageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_check_black_20"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/today_work_cardView_cardView_done_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent" />
     </RelativeLayout>
 
 </RelativeLayout>

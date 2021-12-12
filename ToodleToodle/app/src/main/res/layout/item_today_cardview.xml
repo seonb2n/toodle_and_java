@@ -109,11 +109,13 @@
         <ScrollView
             android:id="@+id/cardView_todo_scrollView"
             android:layout_width="match_parent"
-            android:layout_height="108dp"
+            android:layout_height="105dp"
             android:layout_below="@id/today_work_cardView_card_title"
             android:layout_marginTop="18dp">
 
             <LinearLayout
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
                 android:id="@+id/cardView_todo_scrollView_LinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

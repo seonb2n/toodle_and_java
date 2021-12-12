@@ -8,8 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -42,19 +44,48 @@ public class TodayWorkAdapter extends RecyclerView.Adapter<TodayWorkAdapter.View
         holder.title_textView.setText(item.projectTitle);
         setImportance(holder, item.importance);
         setTodo(holder, item.toDoItems);
+
+        holder.work_add_action_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO add 버튼 누르면 setTodo 메소드 호출
+                TodayWorkToDoItem toDoItem = new TodayWorkToDoItem();
+                toDoItem.content = holder.work_add_action_editText.getText().toString();
+                item.toDoItems.add(toDoItem);
+                setTodo(holder, item.toDoItems);
+            }
+        });
     }
 
     private void setTodo(ViewHolder holder, List<TodayWorkToDoItem> toDoItems) {
 
-        //TODO UI Thread 호출해서 layout inflater 로 뷰 띄워줄 것
+        holder.today_work_todo_LinearLayout.removeAllViews();
 
-//        holder.today_work_todo_LinearLayout.removeAllViews();
-//        toDoItems.forEach(toDoItem -> {
-//                    View item_today_todo = LayoutInflater.from(context).inflate(R.layout.item_today_cardview_action_row, null, false);
-//                    TextView textView = (TextView)item_today_todo.findViewById(R.id.cardView_todo_scrollView_LinearLayout_Row_Content);
-//                    textView.setText(toDoItem.content);
-//                    holder.today_work_todo_LinearLayout.addView(textView);
-//                });
+        for (int i = 0; i < toDoItems.size(); i++) {
+            View item = LayoutInflater.from(context).inflate(R.layout.item_today_cardview_action_row, null, false);
+            TextView textView = item.findViewById(R.id.cardView_todo_scrollView_LinearLayout_Row_Content);
+            textView.setText(toDoItems.get(i).content);
+            ImageView imageView = item.findViewById(R.id.today_work_cardView_cardView_done_imageView);
+            Button button = item.findViewById(R.id.today_work_cardView_cardView_done_button);
+            RelativeLayout doneLayout = item.findViewById(R.id.today_work_cardView_Row_done_RelativeLayout);
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View paramView) {
+                    if(imageView.getVisibility() == View.VISIBLE) {
+                        imageView.setVisibility(View.GONE);
+                        doneLayout.setVisibility(View.GONE);
+                        textView.setVisibility(View.VISIBLE);
+                    } else {
+                        imageView.setVisibility(View.VISIBLE);
+                        doneLayout.setVisibility(View.VISIBLE);
+                        textView.setVisibility(View.GONE);
+                    }
+                }
+            });
+
+            holder.today_work_todo_LinearLayout.addView(item);
+        }
     }
 
 
