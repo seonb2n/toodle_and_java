@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_bright_back">
-    
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="56dp">
@@ -15,26 +15,28 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
             android:text="@string/today_title"
-            android:textSize="26dp"
+            android:textColor="@color/header_bright_txt"
+            android:textSize="26sp"
             android:textStyle="bold"
-            android:textColor="@color/header_bright_txt"/>
-        
+            tools:ignore="RelativeOverlap" />
+
         <Button
             android:layout_width="74dp"
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="20dp"
-            android:text="@string/header_add_fast_btn"
-            android:textSize="13dp"
-            android:textStyle="normal"
-            android:textColor="@color/header_add_btn_txt"
             android:background="@drawable/custom_header_add_btn"
-            android:onClick="AddFastClicked"/>
+            android:onClick="AddFastClicked"
+            android:text="@string/header_add_fast_btn"
+            android:textColor="@color/header_add_btn_txt"
+            android:textSize="13sp"
+            android:textStyle="normal" />
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/postItRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="32dp"
         android:layout_marginTop="56dp">
@@ -43,7 +45,7 @@
             android:id="@+id/postit_RecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none"/>
+            android:scrollbars="none" />
 
         <RelativeLayout
             android:id="@+id/postitNull_Layout"
@@ -56,9 +58,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="@string/postit_null_txt"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:textColor="@color/postit_null_txt"/>
+                android:textColor="@color/postit_null_txt"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="match_parent"
@@ -70,7 +72,165 @@
 
     </RelativeLayout>
 
-    <include
-        layout="@layout/layout_footer"/>
+
+    <RelativeLayout
+        android:id="@+id/todayTimeImageRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postItRelativeLayout"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/today_time_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_sun_30"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/todayNowTimeRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/todayTimeImageRelativeLayout"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="102dp"
+                android:layout_height="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/custom_today_line_rectangle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/today_time_start_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:letterSpacing="0.01"
+                    android:lineHeight="13sp"
+                    android:lineSpacingExtra="-1sp"
+                    android:text="01:00 - 03:00"
+                    android:textColor="@color/project_color_null"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_below="@id/todayNowTimeRelativeLayout"
+        android:layout_marginTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/today_work_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp">
+
+        <ImageView
+            android:id="@+id/night_time_ImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_moon_24" />
+
+        <com.origincurly.toodletoodle.ui.CustomSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/day_time_ImageView"
+            android:layout_toEndOf="@id/night_time_ImageView"
+            android:background="@null"
+            android:max="24"
+            android:maxHeight="14dp"
+            android:minHeight="14dp"
+            android:progress="1"
+            android:progressDrawable="@drawable/custom_today_timestamp_imageview"
+            android:src="@drawable/custom_today_timestamp_imageview"
+            android:thumb="@drawable/ic_twotone_label_24" />
+
+        <ImageView
+            android:id="@+id/day_time_ImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_sun_24" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/custom_today_bottom_btn_back"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/custom_today_bottom_btn_on"
+                android:letterSpacing="0.01"
+                android:text="@string/today_work_bottom_work"
+                android:textAllCaps="false"
+                android:textColor="@color/today_bottom_button_stroke_on"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/custom_today_bottom_btn_off"
+                android:letterSpacing="0.01"
+                android:text="@string/today_work_bottom_plan"
+                android:textAllCaps="false"
+                android:textColor="@color/today_bottom_button_stroke_off"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_footer" />
+
 
 </RelativeLayout>

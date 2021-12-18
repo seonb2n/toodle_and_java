@@ -237,6 +237,28 @@
     <color name="calendar_toast_message_back">#000000</color>
     <!--endregion-->
 
+    <!--region today-->
+    <color name="today_bottom_button_back_stroke">#b6bbc7</color>
+    <color name="today_bottom_button_stroke">#222222</color>
+    <color name="today_bottom_button_stroke_on">#222222</color>
+    <color name="today_bottom_button_stroke_off">#b6bbc7</color>
+    <color name="today_timestamp_imageView">#125d5ce6</color>
+    <color name="today_nowTime_textView_back">#335d5ce6</color>
+    <color name="today_cardView_card_importance_back1">#5d5ce6</color>
+    <color name="today_cardView_card_importance_back2">#43e4c0</color>
+    <color name="today_cardView_card_edit_button_back1">#1A5d5ce6</color>
+    <color name="today_cardView_card_work_title">#6866e9</color>
+    <color name="today_cardView_back">#125d5ce6</color>
+    <color name="today_cardView_toDo_text_done">#40222222</color>
+    <color name="today_basic_black">#222222</color>
+
+    <!--endregion-->
+
+
+    <!-- custom seek bar -->
+    <color name="tick_mark_color">#29222222</color>
+
+    <!--endregion-->
 
 
 </resources>

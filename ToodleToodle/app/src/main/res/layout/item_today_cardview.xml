@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/today_work_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="270dp"
+        android:layout_height="360dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_today_cardview_back">
+
+        <RelativeLayout
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/custom_today_cardview_importance_back">
+
+            <ImageView
+                android:id="@+id/today_work_cardView_importance3"
+                android:visibility="gone"
+                android:layout_width="38dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_star_white_3" />
+
+            <ImageView
+                android:id="@+id/today_work_cardView_importance2"
+                android:visibility="gone"
+                android:layout_width="38dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_star_white_2" />
+
+            <ImageView
+                android:id="@+id/today_work_cardView_importance1"
+                android:visibility="gone"
+                android:layout_width="38dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_star_white_1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="57dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_today_cardview_edit_button_back">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="9dp"
+                android:src="@drawable/ic_task_edit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="9dp"
+                android:letterSpacing="0.04"
+                android:lineSpacingExtra="2sp"
+                android:text="수정"
+                android:textColor="@color/today_basic_black"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/today_work_cardView_edit_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/today_work_cardView_project_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="81dp"
+            android:letterSpacing="0.04"
+            android:text="포트폴리오"
+            android:textColor="@color/today_cardView_card_work_title"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/today_work_cardView_card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="101dp"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="6sp"
+            android:text="포트폴리오 웹사이트 제작"
+            android:textColor="@color/today_basic_black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/cardView_todo_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_below="@id/today_work_cardView_card_title"
+            android:layout_marginTop="18dp">
+
+            <LinearLayout
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/cardView_todo_scrollView_LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="238dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/cardView_todo_scrollView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_today_cardview_add_action_btn_back">
+
+            <EditText
+                android:id="@+id/today_work_cardView_add_action_editText"
+                android:layout_width="213dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:hint="추가할 액션 입력하기"
+                android:letterSpacing="-0.04"
+                android:lineSpacingExtra="1sp"
+                android:textColor="@color/today_basic_black"
+                android:textColorHint="@color/today_basic_black"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+            <RelativeLayout
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_add_section" />
+
+                <Button
+                    android:id="@+id/today_work_cardView_add_action_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

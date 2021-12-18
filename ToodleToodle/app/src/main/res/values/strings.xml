@@ -297,6 +297,8 @@
     <!--project message-->
     <string name="msg_project_auth_wrong">프로젝트를 조회할 권한이 없습니다.</string>
     <string name="msg_project_id_list_load">프로젝트 정보를 불러오고 있습니다.</string>
+    <string name="today_work_bottom_plan">plan</string>
+    <string name="today_work_bottom_work">work</string>
 
     <!--endregion-->
 
