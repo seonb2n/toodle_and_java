@@ -166,7 +166,7 @@
             android:max="24"
             android:maxHeight="14dp"
             android:minHeight="14dp"
-            android:progress="1"
+            android:progress="10"
             android:progressDrawable="@drawable/custom_today_timestamp_imageview"
             android:src="@drawable/custom_today_timestamp_imageview"
             android:thumb="@drawable/ic_twotone_label_24" />
