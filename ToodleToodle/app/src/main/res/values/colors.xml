@@ -255,4 +255,10 @@
     <!--endregion-->
 
 
+    <!-- custom seek bar -->
+    <color name="tick_mark_color">#29222222</color>
+
+    <!--endregion-->
+
+
 </resources>
