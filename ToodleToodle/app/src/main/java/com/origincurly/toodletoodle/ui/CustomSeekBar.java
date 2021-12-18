@@ -36,6 +36,8 @@ public class CustomSeekBar extends AppCompatSeekBar {
     private static final int maxFontSize = 18;
     private static final int minFontSize = 10;
 
+    private static final int leftRightPaddingSeekBar = 50;
+
     private String overlayText;
     protected Paint textPaint;
 
@@ -59,6 +61,7 @@ public class CustomSeekBar extends AppCompatSeekBar {
     }
 
     private void init() {
+        setPadding(leftRightPaddingSeekBar,0,leftRightPaddingSeekBar,0);
         mRulerPaint = new Paint();
         mRulerPaint.setColor(mRulerColor);
         mRulerPaint.setAntiAlias(true);
@@ -130,6 +133,23 @@ public class CustomSeekBar extends AppCompatSeekBar {
         }
     }
 
+    private void drawTextOnThumb(Canvas canvas) {
+        int width = this.getWidth();
+        int height = this.getHeight();
+
+        float textWidth = textPaint.measureText(overlayText);
+        int progress = this.getProgress();
+        int maxProgress = this.getMax();
+        double percentProgress = (double) progress / (double) maxProgress;
+        int textHeight = (int) (Math.abs(textPaint.ascent()) + textPaint.descent() + 1);
+
+        int middleOfThumbControl = (int) ((double) (width - leftRightPaddingSeekBar * 2) * percentProgress);
+
+        float x = middleOfThumbControl + textWidth / 2;
+        float y = height - textHeight * 2 + (float)textHeight / 3;
+        canvas.drawText(overlayText, x, y, textPaint);
+    }
+
     @Override
     protected synchronized void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -137,28 +157,16 @@ public class CustomSeekBar extends AppCompatSeekBar {
         drawTickMark(canvas);
         canvas.save();
 
-        int width = this.getWidth();
-        int height = this.getHeight();
-
-        float textWidth = textPaint.measureText(overlayText);
-
-        int progress = this.getProgress();
-        int maxProgress = this.getMax();
-        double percentProgress = (double) progress / (double) maxProgress;
-        int textHeight = (int) (Math.abs(textPaint.ascent()) + textPaint.descent() + 1);
-        int thumbOffset = this.getThumbOffset();
-
-        int middleOfThumbControl = (int) ((double) (width-textMargin) * percentProgress);
-        int spaceToLeftOfThumbControl = middleOfThumbControl - thumbOffset;
-        int spaceToRightOfThumbControl = (width - middleOfThumbControl) - thumbOffset;
-        int bottomPadding = this.getPaddingBottom();
-        int topPadding = this.getPaddingTop();
-
-        float x = middleOfThumbControl;
-        float y = height - textHeight - bottomPadding;
-        canvas.drawText(overlayText, x, y, textPaint);
-
+        drawTextOnThumb(canvas);
         canvas.restore();
+    }
+
+    public void setSeekBarText(String text) {
+        setOverlayText(text);
+    }
+
+    public void setSeekBarProgress(int nowProgress) {
+        this.setProgress(nowProgress);
     }
 
     public void setRulerCount(int mRulerCount) {

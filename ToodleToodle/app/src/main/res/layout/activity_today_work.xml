@@ -161,12 +161,14 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_toStartOf="@id/day_time_ImageView"
+
             android:layout_toEndOf="@id/night_time_ImageView"
             android:background="@null"
             android:max="24"
             android:maxHeight="14dp"
             android:minHeight="14dp"
             android:progress="10"
+            android:padding="0dp"
             android:progressDrawable="@drawable/custom_today_timestamp_imageview"
             android:src="@drawable/custom_today_timestamp_imageview"
             android:thumb="@drawable/ic_twotone_label_24" />
