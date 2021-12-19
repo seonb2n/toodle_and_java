@@ -6,7 +6,9 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,6 +27,7 @@ import org.threeten.bp.LocalDateTime;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -51,6 +54,10 @@ public class TodayWorkActivity extends BasicActivity {
     private PostitHorizontalAdapter postitHorizontalAdapter;
     private TodayWorkAdapter todayWorkAdapter;
 
+    private TextView todayTimeNowTextView;
+
+    private LinearLayoutManager todayCardViewLayoutManager;
+
     //endregion
 
     //cardView 용 mock data
@@ -76,11 +83,23 @@ public class TodayWorkActivity extends BasicActivity {
         postit_RecyclerView.setLayoutManager(layoutManager);
 
         todoCardView_RecyclerView = findViewById(R.id.today_work_RecyclerView);
-        LinearLayoutManager layoutManager1 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        todoCardView_RecyclerView.setLayoutManager(layoutManager1);
+        todayCardViewLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        todoCardView_RecyclerView.setLayoutManager(todayCardViewLayoutManager);
 
         new TodayWorkTask().execute();
 
+        todayTimeNowTextView = findViewById(R.id.today_time_start_textView);
+        showWorkTime(calculateNowTime(), calculateNowTime());
+
+    }
+
+    private void showWorkTime(String startTime, String endTime) {
+        String result = startTime + " - " + endTime;
+        todayTimeNowTextView.setText(result);
+    }
+
+    private String calculateNowTime() {
+        return String.valueOf(LocalDateTime.now().getHour())+":00";
     }
 
     private View.OnClickListener onClickPostitItem = new View.OnClickListener() {
@@ -308,7 +327,7 @@ public class TodayWorkActivity extends BasicActivity {
         todayWorkCardViewItem1.id = 1;
         todayWorkCardViewItem1.importance = 3;
         todayWorkCardViewItem1.startAt = LocalDateTime.now();
-        todayWorkCardViewItem1.endAt = LocalDateTime.now().plusHours(2L);
+        todayWorkCardViewItem1.endAt = LocalDateTime.now().plusHours(1L);
         todayWorkCardViewItem1.cardViewTitle = "포트폴리오";
         todayWorkCardViewItem1.projectTitle = "포트폴리오 웹사이트 제작";
 
@@ -323,8 +342,18 @@ public class TodayWorkActivity extends BasicActivity {
         todayWorkCardViewItem2.projectTitle = "포트폴리오 웹사이트 제작";
         todayWorkCardViewItem2.toDoItems = toDoItems;
 
+        TodayWorkCardViewItem todayWorkCardViewItem3 = new TodayWorkCardViewItem();
+        todayWorkCardViewItem3.importance = 2;
+        todayWorkCardViewItem3.id = 3;
+        todayWorkCardViewItem3.startAt = LocalDateTime.now();
+        todayWorkCardViewItem3.endAt = LocalDateTime.now().plusHours(3L);
+        todayWorkCardViewItem3.cardViewTitle = "포트폴리오3";
+        todayWorkCardViewItem3.projectTitle = "포트폴리오 웹사이트 제작";
+        todayWorkCardViewItem3.toDoItems = toDoItems;
+
         todayWorkCardViewItems.add(todayWorkCardViewItem1);
         todayWorkCardViewItems.add(todayWorkCardViewItem2);
+        todayWorkCardViewItems.add(todayWorkCardViewItem3);
 
         todayWorkAdapter = new TodayWorkAdapter(mContext, todayWorkCardViewItems);
         new CardViewTask().execute();
@@ -344,7 +373,30 @@ public class TodayWorkActivity extends BasicActivity {
 
     private void setTodayWorkCardView (JSONArray jsonArray) {
         todoCardView_RecyclerView.setAdapter(todayWorkAdapter);
+        todoCardView_RecyclerView.addOnScrollListener(cardViewOnScrollListener);
     }
+
+    //recyclerview item 가운데에 자동으로 맞춰지게 하는 코드
+    private RecyclerView.OnScrollListener cardViewOnScrollListener = new RecyclerView.OnScrollListener() {
+        @Override
+        public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+            super.onScrollStateChanged(recyclerView, newState);
+            if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                //scroll 이 멈추면 아래 코드 실행
+                int firstPos = ((LinearLayoutManager) Objects.requireNonNull(recyclerView.getLayoutManager())).findFirstCompletelyVisibleItemPosition();
+                int secondPos = ((LinearLayoutManager) recyclerView.getLayoutManager()).findFirstVisibleItemPosition();
+                int selectedPos = Math.max(firstPos, secondPos);
+
+                if(selectedPos != -1 && selectedPos != (todayWorkCardViewItems.size() - 1) && (firstPos - secondPos) != 0) {
+                    View viewItem = ((LinearLayoutManager) recyclerView.getLayoutManager()).findViewByPosition(selectedPos);
+                    if(viewItem != null) {
+                        int itemMargin = (recyclerView.getMeasuredWidth() - viewItem.getMeasuredWidth()) / 2;
+                        recyclerView.smoothScrollBy((int) viewItem.getX() - itemMargin, 0);
+                    }
+                }
+            }
+        }
+    };
 
     //endregion
 

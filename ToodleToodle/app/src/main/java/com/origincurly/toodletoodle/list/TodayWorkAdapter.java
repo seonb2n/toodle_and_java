@@ -1,11 +1,14 @@
 package com.origincurly.toodletoodle.list;
 
 import android.content.Context;
+import android.text.Layout;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -15,6 +18,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.origincurly.toodletoodle.GlobalValue;
@@ -31,6 +35,7 @@ public class TodayWorkAdapter extends RecyclerView.Adapter<TodayWorkAdapter.View
         this.items = items;
     }
 
+
     @Override
     public TodayWorkAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_today_cardview, null);
@@ -39,6 +44,7 @@ public class TodayWorkAdapter extends RecyclerView.Adapter<TodayWorkAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull TodayWorkAdapter.ViewHolder holder, int position) {
+
         final TodayWorkCardViewItem item = items.get(position);
         holder.project_title_textView.setText(item.cardViewTitle);
         holder.title_textView.setText(item.projectTitle);
@@ -48,13 +54,27 @@ public class TodayWorkAdapter extends RecyclerView.Adapter<TodayWorkAdapter.View
         holder.work_add_action_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO add 버튼 누르면 setTodo 메소드 호출
                 TodayWorkToDoItem toDoItem = new TodayWorkToDoItem();
                 toDoItem.content = holder.work_add_action_editText.getText().toString();
                 item.toDoItems.add(toDoItem);
                 setTodo(holder, item.toDoItems);
             }
         });
+
+        //아이템의 첫 번째, 마지막 아이템 마진 주기 위한 코드
+        if(position == 0 || position == items.size() - 1) {
+            holder.today_work_cardView_item_layout.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+            DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+            int screenWidth = displayMetrics.widthPixels;
+            FrameLayout.LayoutParams mLayoutParam = (FrameLayout.LayoutParams) holder.today_work_cardView_item_layout.getLayoutParams();
+
+            if(position == 0) {
+                mLayoutParam.leftMargin = (screenWidth - holder.today_work_cardView_item_layout.getMeasuredWidthAndState()) / 2;
+            }
+            else {
+                mLayoutParam.rightMargin = (screenWidth - holder.today_work_cardView_item_layout.getMeasuredWidthAndState()) / 2;
+            }
+        }
     }
 
     private void setTodo(ViewHolder holder, List<TodayWorkToDoItem> toDoItems) {
@@ -116,6 +136,7 @@ public class TodayWorkAdapter extends RecyclerView.Adapter<TodayWorkAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
+        RelativeLayout today_work_cardView_item_layout;
         ImageView importance_imageView1;
         ImageView importance_imageView2;
         ImageView importance_imageView3;
@@ -131,6 +152,7 @@ public class TodayWorkAdapter extends RecyclerView.Adapter<TodayWorkAdapter.View
         public ViewHolder(View itemView) {
             super(itemView);
             cardView = itemView.findViewById(R.id.today_work_cardView);
+            today_work_cardView_item_layout = itemView.findViewById(R.id.today_work_cardView_item_layout);
             importance_imageView1 = itemView.findViewById(R.id.today_work_cardView_importance1);
             importance_imageView2 = itemView.findViewById(R.id.today_work_cardView_importance2);
             importance_imageView3 = itemView.findViewById(R.id.today_work_cardView_importance3);
