@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ import com.origincurly.toodletoodle.list.PostitHorizontalAdapter;
 import com.origincurly.toodletoodle.list.TodayWorkAdapter;
 import com.origincurly.toodletoodle.list.TodayWorkCardViewItem;
 import com.origincurly.toodletoodle.list.TodayWorkToDoItem;
+import com.origincurly.toodletoodle.ui.CustomSeekBar;
 import com.origincurly.toodletoodle.util.ErrorCodeEnum;
 import com.origincurly.toodletoodle.util.NetworkManager;
 
@@ -58,6 +60,8 @@ public class TodayWorkActivity extends BasicActivity {
     private TextView todayTimeNowTextView;
 
     private LinearLayoutManager todayCardViewLayoutManager;
+    private CustomSeekBar todayTimeSeekBar;
+    private RelativeLayout cardView_null_layout;
 
     //endregion
 
@@ -88,8 +92,10 @@ public class TodayWorkActivity extends BasicActivity {
         todoCardView_RecyclerView.setLayoutManager(todayCardViewLayoutManager);
 
         new TodayWorkTask().execute();
-
         todayTimeNowTextView = findViewById(R.id.today_time_start_textView);
+        todayTimeSeekBar = findViewById(R.id.today_time_seekBar);
+        todayTimeSeekBar.setEnabled(false);
+        cardView_null_layout = findViewById(R.id.cardView_null_layout);
     }
 
     private void showWorkTime(String startTime, String endTime) {
@@ -99,6 +105,10 @@ public class TodayWorkActivity extends BasicActivity {
 
     private String convertDateTimeToString(LocalDateTime localDateTime) {
         return String.valueOf(localDateTime.getHour())+":" + String.valueOf(localDateTime.getMinute());
+    }
+
+    private int convertDateTimeToInt(LocalDateTime localDateTime) {
+        return (int)localDateTime.getHour();
     }
 
     private View.OnClickListener onClickPostitItem = new View.OnClickListener() {
@@ -187,6 +197,7 @@ public class TodayWorkActivity extends BasicActivity {
         postitHorizontalAdapter = new PostitHorizontalAdapter(mContext, onClickPostitItem);
 
         if (jsonArray.length() > 0) {
+
             for (int i = 0; i < jsonArray.length(); i++) {
                 try {
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -310,6 +321,10 @@ public class TodayWorkActivity extends BasicActivity {
 
     private void setCardView(JSONArray jsonArray) {
 
+        if(jsonArray ==  null) {
+            cardView_null_layout.setVisibility(View.VISIBLE);
+        }
+
         //mock data
         todayWorkCardViewItems = new ArrayList<>();
         List<TodayWorkToDoItem> toDoItems = new ArrayList<>();
@@ -394,10 +409,14 @@ public class TodayWorkActivity extends BasicActivity {
                     }
                 }
 
-                //TODO 지금 보여지는 cardView 에 따라서 시간대와 밑에 seek bar 움직이게 만들기
+                //cardview 움직임에 따라 시간과 seek bar progress 변경
                 if(((LinearLayoutManager) Objects.requireNonNull(recyclerView.getLayoutManager())).findFirstCompletelyVisibleItemPosition() != -1) {
                     int nowPos = ((LinearLayoutManager) Objects.requireNonNull(recyclerView.getLayoutManager())).findFirstCompletelyVisibleItemPosition();
-                    showWorkTime(convertDateTimeToString(todayWorkCardViewItems.get(nowPos).startAt), convertDateTimeToString(todayWorkCardViewItems.get(nowPos).endAt));
+                    String nowStartTime = convertDateTimeToString(todayWorkCardViewItems.get(nowPos).startAt);
+                    String nowEndTime = convertDateTimeToString(todayWorkCardViewItems.get(nowPos).endAt);
+                    showWorkTime(nowStartTime, nowEndTime);
+                    todayTimeSeekBar.setOverlayText(nowStartTime);
+                    todayTimeSeekBar.setProgress(convertDateTimeToInt(todayWorkCardViewItems.get(nowPos).startAt), true);
                 }
             }
         }

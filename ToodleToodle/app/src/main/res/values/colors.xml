@@ -251,6 +251,7 @@
     <color name="today_cardView_back">#125d5ce6</color>
     <color name="today_cardView_toDo_text_done">#40222222</color>
     <color name="today_basic_black">#222222</color>
+    <color name="today_task_null_back">#ededf2</color>
 
     <!--endregion-->
 

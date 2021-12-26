@@ -85,7 +85,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_sun_30"/>
+            android:src="@drawable/ic_sun_30" />
 
     </RelativeLayout>
 
@@ -135,6 +135,34 @@
         android:layout_below="@id/todayNowTimeRelativeLayout"
         android:layout_marginTop="10dp">
 
+        <RelativeLayout
+            android:id="@+id/cardView_null_layout"
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/custom_today_task_null"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="118dp"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.04"
+                android:lineHeight="26sp"
+                android:lineSpacingExtra="9sp"
+                android:text="@string/today_work_cardView_null_text"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="184dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/task_null_back_img" />
+
+        </RelativeLayout>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/today_work_RecyclerView"
             android:layout_width="match_parent"
@@ -157,6 +185,7 @@
             android:src="@drawable/ic_moon_24" />
 
         <com.origincurly.toodletoodle.ui.CustomSeekBar
+            android:id="@+id/today_time_seekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -170,7 +199,7 @@
             android:progress="10"
             android:progressDrawable="@drawable/custom_today_timestamp_imageview"
             android:src="@drawable/custom_today_timestamp_imageview"
-            android:thumb="@drawable/ic_twotone_label_24" />
+            android:thumb="@drawable/ic_today_seekbar_thumb" />
 
         <ImageView
             android:id="@+id/day_time_ImageView"
