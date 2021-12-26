@@ -77,6 +77,7 @@ public class CustomSeekBar extends AppCompatSeekBar {
         textPaint.setTypeface(Typeface.DEFAULT_BOLD);
         textPaint.setTextAlign(Paint.Align.LEFT);
         textPaint.setColor(textColor);
+        textPaint.setTextSize(16);
         String nowTime = "02:00";
         setOverlayText(nowTime);
     }
@@ -146,7 +147,7 @@ public class CustomSeekBar extends AppCompatSeekBar {
         int middleOfThumbControl = (int) ((double) (width - leftRightPaddingSeekBar * 2) * percentProgress);
 
         float x = middleOfThumbControl + textWidth / 2;
-        float y = height - textHeight * 2 + (float)textHeight / 3;
+        float y = height - textHeight * 2;
         canvas.drawText(overlayText, x, y, textPaint);
     }
 
