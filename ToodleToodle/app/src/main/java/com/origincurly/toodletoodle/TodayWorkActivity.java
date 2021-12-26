@@ -323,53 +323,12 @@ public class TodayWorkActivity extends BasicActivity {
 
         if(jsonArray ==  null) {
             cardView_null_layout.setVisibility(View.VISIBLE);
+        } else {
+            //mock data
+            todayWorkCardViewItems = new ArrayList<>();
+            todayWorkAdapter = new TodayWorkAdapter(mContext, todayWorkCardViewItems);
         }
 
-        //mock data
-        todayWorkCardViewItems = new ArrayList<>();
-        List<TodayWorkToDoItem> toDoItems = new ArrayList<>();
-        TodayWorkToDoItem toDoItem1 = new TodayWorkToDoItem();
-        toDoItem1.id = 1;
-        toDoItem1.content = "로그인 버튼 시안 제작";
-        TodayWorkToDoItem toDoItem2 = new TodayWorkToDoItem();
-        toDoItem2.id = 2;
-        toDoItem2.content = "모바일 페이지 제작";
-        toDoItems.add(toDoItem1);
-        toDoItems.add(toDoItem2);
-
-        TodayWorkCardViewItem todayWorkCardViewItem1 = new TodayWorkCardViewItem();
-        todayWorkCardViewItem1.id = 1;
-        todayWorkCardViewItem1.importance = 3;
-        todayWorkCardViewItem1.startAt = LocalDateTime.now();
-        todayWorkCardViewItem1.endAt = todayWorkCardViewItem1.startAt.plusHours(1L);
-        todayWorkCardViewItem1.cardViewTitle = "포트폴리오";
-        todayWorkCardViewItem1.projectTitle = "포트폴리오 웹사이트 제작";
-
-        todayWorkCardViewItem1.toDoItems = toDoItems;
-
-        TodayWorkCardViewItem todayWorkCardViewItem2 = new TodayWorkCardViewItem();
-        todayWorkCardViewItem2.importance = 1;
-        todayWorkCardViewItem2.id = 2;
-        todayWorkCardViewItem2.startAt = LocalDateTime.now().plusHours(1L);
-        todayWorkCardViewItem2.endAt = todayWorkCardViewItem2.startAt.plusHours(1L);
-        todayWorkCardViewItem2.cardViewTitle = "포트폴리오2";
-        todayWorkCardViewItem2.projectTitle = "포트폴리오 웹사이트 제작";
-        todayWorkCardViewItem2.toDoItems = toDoItems;
-
-        TodayWorkCardViewItem todayWorkCardViewItem3 = new TodayWorkCardViewItem();
-        todayWorkCardViewItem3.importance = 2;
-        todayWorkCardViewItem3.id = 3;
-        todayWorkCardViewItem3.startAt = LocalDateTime.now().plusHours(2L);
-        todayWorkCardViewItem3.endAt = todayWorkCardViewItem3.startAt.plusHours(1L);
-        todayWorkCardViewItem3.cardViewTitle = "포트폴리오3";
-        todayWorkCardViewItem3.projectTitle = "포트폴리오 웹사이트 제작";
-        todayWorkCardViewItem3.toDoItems = toDoItems;
-
-        todayWorkCardViewItems.add(todayWorkCardViewItem1);
-        todayWorkCardViewItems.add(todayWorkCardViewItem2);
-        todayWorkCardViewItems.add(todayWorkCardViewItem3);
-
-        todayWorkAdapter = new TodayWorkAdapter(mContext, todayWorkCardViewItems);
         new CardViewTask().execute();
 
     }
