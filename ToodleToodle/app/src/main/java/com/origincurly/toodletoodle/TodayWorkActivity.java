@@ -325,6 +325,7 @@ public class TodayWorkActivity extends BasicActivity {
             cardView_null_layout.setVisibility(View.VISIBLE);
         } else {
             //mock data
+            cardView_null_layout.setVisibility(View.GONE);
             todayWorkCardViewItems = new ArrayList<>();
             todayWorkAdapter = new TodayWorkAdapter(mContext, todayWorkCardViewItems);
         }

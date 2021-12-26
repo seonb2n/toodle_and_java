@@ -140,8 +140,7 @@
             android:layout_width="270dp"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:background="@drawable/custom_today_task_null"
-            android:visibility="visible">
+            android:background="@drawable/custom_today_task_null">
 
             <TextView
                 android:layout_width="match_parent"
